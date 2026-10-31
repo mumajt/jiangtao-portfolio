@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="scroll-behavior: smooth;"><head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蒋涛 — 企业品牌设计师（企划设计），12年经验，专注品牌活动、展会全案、包装与新媒体内容设计。">
+    <title>蒋涛 JIANG TAO — 品牌企划设计师</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/Administrator/WorkBuddy/2026-10-31-18-24-33/jiangtao-portfolio/src/components/rb/SpotlightCard.css">.spotlight-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--spotlight-card-surface);
+  box-shadow: var(--spotlight-card-shadow);
+}
+
+.spotlight-card__light,
+.spotlight-card__grain,
+.spotlight-card__border,
+.spotlight-card__edge {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.spotlight-card__light,
+.spotlight-card__grain {
+  z-index: -1;
+  opacity: 0;
+}
+
+.spotlight-card__grain {
+  background-size: 160px 160px;
+  mix-blend-mode: overlay;
+}
+
+.spotlight-card__border,
+.spotlight-card__edge {
+  z-index: 1;
+  padding: 1px;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+}
+
+.spotlight-card__border {
+  background: var(--spotlight-card-border);
+}
+
+.spotlight-card__edge {
+  opacity: 0;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Administrator/WorkBuddy/2026-10-31-18-24-33/jiangtao-portfolio/src/index.css">/* ============================================================
+   蒋涛 · 品牌企划设计师 作品集
+   暗色系 / 高级 / 克制 / 科技感
+   版心 1700px，PC 端优先
+   ============================================================ */
+
+:root {
+  --bg: #0a0c10;
+  --bg-soft: #0e1116;
+  --panel: #11151c;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --text: #e8ecef;
+  --text-dim: #9aa3ad;
+  --text-faint: #5c6570;
+  --accent: #4fe3c1;
+  --accent-dim: rgba(79, 227, 193, 0.12);
+  --font: 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', 'Noto Sans SC',
+    -apple-system, 'Segoe UI', sans-serif;
+  --font-en: 'SF Mono', 'JetBrains Mono', Consolas, monospace;
+  --container: 1700px;
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--accent); color: #04110d; }
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.accent { color: var(--accent); }
+
+.section { padding: 140px 0; }
+
+.section__kicker {
+  font-family: var(--font-en);
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.section__title {
+  font-size: clamp(36px, 3.2vw, 56px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+
+.section__note {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-top: -14px;
+  margin-bottom: 40px;
+}
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn--solid {
+  background: var(--accent);
+  color: #04110d;
+  font-weight: 600;
+}
+.btn--solid:hover {
+  box-shadow: 0 0 32px rgba(79, 227, 193, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  border-color: var(--line-strong);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+}
+.btn--outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 26px rgba(79, 227, 193, 0.16);
+  transform: translateY(-2px);
+}
+
+.btn--sm { padding: 9px 24px; font-size: 13px; }
+
+/* ---------- 导航 ---------- */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav--scrolled {
+  background: rgba(10, 12, 16, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: var(--line);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+}
+
+.nav__logo-dot { color: var(--accent); font-size: 12px; }
+
+.nav__logo-sub {
+  font-family: var(--font-en);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--text-faint);
+}
+
+.nav__links {
+  display: flex;
+  gap: 44px;
+}
+
+.nav__links a {
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav__links a:hover { color: var(--text); }
+.nav__links a:hover::after { width: 100%; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__mask {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10,12,16,0.55) 0%, rgba(10,12,16,0.35) 45%, var(--bg) 100%),
+    radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, rgba(10,12,16,0.6) 100%);
+}
+
+.hero__content { position: relative; z-index: 2; padding-top: 60px; }
+
+/* ===== 首页背景：作品瀑布下落（FallingGallery） ===== */
+.fallgal {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fallgal__cols {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.fallgal__col {
+  flex: 1;
+  max-width: 300px;
+  height: 100%;
+  overflow: hidden;
+  opacity: var(--dim, 0.4);
+}
+
+.fallgal__track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  animation: fallgal-drop var(--dur, 45s) linear infinite;
+  will-change: transform;
+}
+
+.fallgal__track.is-rev { animation-direction: reverse; }
+
+.fallgal__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-bottom: 26px; /* 保证 -50% 循环处无缝 */
+}
+
+.fallgal__item {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  background: #12151b;
+}
+
+.fallgal__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: saturate(0.82) brightness(0.88) contrast(1.02);
+}
+
+@keyframes fallgal-drop {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+/* 压暗遮罩：只做「顶部/底部过渡 + 文字区适度加深」，图片整体保持清晰可辨 */
+.fallgal__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 50% at 42% 46%, rgba(10, 12, 16, 0.55) 0%, rgba(10, 12, 16, 0.22) 60%, transparent 100%),
+    linear-gradient(180deg, rgba(10, 12, 16, 0.85) 0%, transparent 22%, transparent 70%, rgba(10, 12, 16, 0.92) 100%);
+}
+
+@media (max-width: 1280px) {
+  .fallgal__col:nth-child(n + 5) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fallgal__track { animation: none; }
+}
+
+.hero__kicker {
+  font-family: var(--font-en);
+  font-size: 13px;
+  letter-spacing: 0.45em;
+  color: var(--accent);
+  margin-bottom: 28px;
+}
+
+.hero__title {
+  font-size: clamp(72px, 9vw, 168px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 36px;
+}
+
+.hero__title-en {
+  font-family: var(--font-en);
+  font-size: clamp(13px, 1.1vw, 18px);
+  font-weight: 400;
+  letter-spacing: 0.55em;
+  color: var(--text-faint);
+}
+
+.hero__sub {
+  margin-top: 36px;
+  max-width: 640px;
+  font-size: 17px;
+  color: var(--text-dim);
+}
+
+.hero__actions {
+  margin-top: 48px;
+  display: flex;
+  gap: 20px;
+}
+
+.hero__meta {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 90px;
+  padding-bottom: 48px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--text-faint);
+  flex-wrap: wrap;
+}
+
+.hero__meta i {
+  width: 24px; height: 1px;
+  background: var(--line-strong);
+}
+
+.hero__scroll {
+  position: absolute;
+  right: 64px;
+  bottom: 48px;
+  z-index: 2;
+  width: 1px;
+  height: 72px;
+  background: var(--line-strong);
+  overflow: hidden;
+}
+
+.hero__scroll span {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: var(--accent);
+  animation: scrollHint 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollHint {
+  0% { top: -40%; }
+  60%, 100% { top: 110%; }
+}
+
+/* ---------- 入场动画 ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  animation: reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.reveal--d1 { animation-delay: 0.1s; }
+.reveal--d2 { animation-delay: 0.25s; }
+.reveal--d3 { animation-delay: 0.4s; }
+.reveal--d4 { animation-delay: 0.55s; }
+
+@keyframes reveal {
+  to { opacity: 1; transform: none; }
+}
+
+/* ---------- About ---------- */
+.about { background: var(--bg); }
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 96px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.about__portrait-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, #131820 0%, #0d1015 100%);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.about__portrait-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  /* 融入暗色系：轻微降饱和 + 压暗 + 微调对比 */
+  filter: saturate(0.78) brightness(0.92) contrast(1.03);
+}
+
+/* 头像上的暗角渐变，进一步压住亮色背景 */
+.about__portrait-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background:
+    linear-gradient(180deg, rgba(10, 12, 16, 0.02) 0%, rgba(10, 12, 16, 0.28) 100%),
+    radial-gradient(ellipse 90% 70% at 50% 40%, transparent 55%, rgba(10, 12, 16, 0.18) 100%);
+  pointer-events: none;
+}
+
+.about__portrait-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(79,227,193,0.08), transparent 50%),
+    linear-gradient(160deg, #131820, #0d1015);
+}
+
+.about__portrait-fallback span {
+  font-size: 120px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.1em;
+}
+
+.about__portrait-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.about__portrait-tag {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: var(--text-faint);
+}
+
+.about__lead {
+  font-size: clamp(24px, 2vw, 32px);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.about__text {
+  color: var(--text-dim);
+  max-width: 760px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.about__contact {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 320px));
+  gap: 14px 48px;
+  margin: 36px 0 48px;
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.about__contact li {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  font-size: 15px;
+}
+
+.about__contact span {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--text-faint);
+  min-width: 36px;
+}
+
+.about__contact a:hover { color: var(--accent); }
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  padding-top: 36px;
+}
+
+.stat__num {
+  font-size: clamp(40px, 3.4vw, 60px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat__num em {
+  font-style: normal;
+  font-size: 0.45em;
+  color: var(--accent);
+  margin-left: 4px;
+}
+
+.stat__label {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-faint);
+  letter-spacing: 0.06em;
+}
+
+/* ---------- 时间线 ---------- */
+.timeline { margin-top: 120px; }
+
+.timeline__title {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--text-faint);
+  margin-bottom: 40px;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  transition: background 0.25s;
+}
+
+.timeline__item:hover { background: rgba(255, 255, 255, 0.015); }
+
+.timeline__time {
+  font-family: var(--font-en);
+  font-size: 13px;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+  padding-top: 4px;
+}
+
+.timeline__head {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.timeline__head strong { font-size: 18px; letter-spacing: 0.02em; }
+
+.timeline__role {
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-dim);
+  padding: 2px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+}
+
+.timeline__main p {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  max-width: 900px;
+}
+
+/* ---------- Projects ---------- */
+.projects { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+  margin-top: 48px;
+}
+
+.pcard {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.35s;
+}
+
+.pcard:hover {
+  transform: translateY(-8px);
+  border-color: var(--line-strong);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.pcard__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.pcard__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.pcard:hover .pcard__media img { transform: scale(1.04); }
+
+/* React Bits 接入：Hero BlurText 根元素与 SpotlightCard 裸接样式 */
+.hero__title p { margin: 0; }
+
+/* 进场动画包装层：保持栅格子项拉伸，避免卡片高度不齐 */
+.ac-fill { display: flex; }
+.projects__grid > .ac-fill > .pcard,
+.strengths__grid > .ac-fill > .spotlight-card,
+.ai__grid > .ac-fill > .ai__card,
+.contact__list > .ac-fill > .contact__item { flex: 1; }
+
+.contact__title p { margin: 0; }
+
+/* 顶部滚动进度条 */
+.nav__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(79, 227, 193, 0.25) 100%);
+  transform-origin: left center;
+  transform: scaleX(0);
+  z-index: 101;
+}
+
+.spotlight-card.scard {
+  padding: 40px 36px 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: none;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.spotlight-card.scard:hover {
+  transform: translateY(-6px);
+  border-color: var(--line-strong);
+  box-shadow: 0 24px 48px -22px rgba(0, 0, 0, 0.55);
+}
+
+.pcard__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pcard__placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+}
+
+.pcard__placeholder-title {
+  position: relative;
+  font-size: clamp(26px, 2.2vw, 40px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pcard__placeholder-sub {
+  position: relative;
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.pcard__tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  background: rgba(10, 12, 16, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.pcard__body {
+  padding: 22px 24px 26px;
+}
+
+.pcard__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.pcard__year {
+  font-family: var(--font-en);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.pcard__body h3 {
+  font-size: 17.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.pcard__body p {
+  color: var(--text-dim);
+  font-size: 13.5px;
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 可点击卡片（带图集） */
+.pcard--clickable { cursor: pointer; }
+.pcard--clickable .pcard__media img { transition: transform 0.6s ease; }
+.pcard--clickable:hover .pcard__media img { transform: scale(1.05); }
+.pcard--clickable:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.pcard__view {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  background: rgba(10, 12, 16, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 6px 14px;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+}
+
+.pcard--clickable:hover .pcard__view { opacity: 1; transform: none; }
+
+/* ---------- Lightbox 项目详情弹层 ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(5, 7, 9, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: lbFade 0.25s ease;
+}
+
+@keyframes lbFade { from { opacity: 0; } }
+
+.lightbox__panel {
+  position: relative;
+  width: min(1280px, 100%);
+  max-height: calc(100vh - 80px);
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 32px 36px 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: lbRise 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes lbRise {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+}
+
+.lightbox__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.lightbox__head-info {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.lightbox__tag {
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-dim);
+  padding: 3px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.lightbox__head h3 { font-size: 22px; letter-spacing: 0.02em; }
+
+.lightbox__year {
+  font-family: var(--font-en);
+  font-size: 12px;
+  color: var(--text-faint);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.lightbox__close {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lightbox__close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.lightbox__desc {
+  margin-top: 14px;
+  color: var(--text-dim);
+  font-size: 14px;
+  max-width: 880px;
+}
+
+.lightbox__stage {
+  position: relative;
+  margin-top: 24px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: calc(100vh - 380px);
+  min-height: 320px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  animation: lbImg 0.3s ease;
+}
+
+@keyframes lbImg { from { opacity: 0; transform: scale(0.99); } }
+
+.lightbox__caption {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lightbox__count {
+  font-family: var(--font-en);
+  color: var(--accent);
+  letter-spacing: 0.15em;
+}
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: rgba(10, 12, 16, 0.6);
+  backdrop-filter: blur(8px);
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__nav:hover { border-color: var(--accent); color: var(--accent); }
+.lightbox__nav--prev { left: -8px; }
+.lightbox__nav--next { right: -8px; }
+
+.lightbox__thumbs {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.lightbox__thumb {
+  flex-shrink: 0;
+  width: 108px;
+  height: 68px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: all 0.25s;
+}
+
+.lightbox__thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.lightbox__thumb:hover { opacity: 0.85; }
+
+.lightbox__thumb.is-active {
+  opacity: 1;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* ---------- Strengths ---------- */
+.strengths__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.scard {
+  position: relative;
+  padding: 40px 36px 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.scard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.scard:hover { transform: translateY(-6px); border-color: var(--line-strong); }
+.scard:hover::before { opacity: 1; }
+
+.scard__no {
+  font-family: var(--font-en);
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+
+.scard h3 {
+  font-size: 20px;
+  margin: 18px 0 14px;
+  letter-spacing: 0.02em;
+}
+
+.scard p {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  min-height: 74px;
+}
+
+.scard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.scard__tags span {
+  font-size: 12px;
+  color: var(--text-faint);
+  border: 1px solid var(--line);
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.scard:hover .scard__tags span { border-color: rgba(79, 227, 193, 0.35); color: var(--text-dim); }
+
+/* ---------- AI Workflow ---------- */
+.ai {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+}
+
+.ai__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.ai__lead {
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
+.ai__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 560px;
+  justify-content: flex-end;
+}
+
+.ai__tools span {
+  font-family: var(--font-en);
+  font-size: 13px;
+  color: var(--text-dim);
+  border: 1px solid var(--line-strong);
+  padding: 8px 18px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  transition: all 0.25s;
+}
+
+.ai__tools span:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(79, 227, 193, 0.15);
+}
+
+.ai__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 72px;
+}
+
+.ai__card {
+  padding: 34px 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.ai__card:hover { transform: translateY(-6px); border-color: var(--line-strong); }
+
+.ai__step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.ai__step span {
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+}
+
+.ai__step i {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-dim), transparent);
+}
+
+.ai__step i.last { background: linear-gradient(90deg, var(--accent), transparent); }
+
+.ai__card h3 { font-size: 18px; margin-bottom: 10px; }
+.ai__card p { color: var(--text-dim); font-size: 14px; }
+
+/* ---------- Contact Footer ---------- */
+.contact {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+}
+
+.contact__glow {
+  position: absolute;
+  left: 50%;
+  bottom: -30%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(79, 227, 193, 0.09), transparent 65%);
+  pointer-events: none;
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.contact__kicker {
+  font-family: var(--font-en);
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  color: var(--accent);
+  margin-bottom: 26px;
+}
+
+.contact__title {
+  font-size: clamp(56px, 6.4vw, 118px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+.contact__sub {
+  margin-top: 30px;
+  color: var(--text-dim);
+  font-size: 17px;
+}
+
+.contact__list {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 36px 32px 36px 0;
+  border-bottom: 1px solid var(--line);
+  transition: all 0.25s;
+}
+
+.contact__item:not(:last-child) { border-right: 1px solid var(--line); padding-right: 48px; }
+.contact__item + .contact__item { padding-left: 48px; }
+
+.contact__item:hover { background: rgba(255, 255, 255, 0.015); }
+
+.contact__label {
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: var(--text-faint);
+}
+
+.contact__value {
+  font-size: clamp(18px, 1.5vw, 26px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+a.contact__item:hover .contact__value { color: var(--accent); }
+
+.footer {
+  margin-top: auto;
+  padding-top: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-faint);
+  letter-spacing: 0.06em;
+}
+
+.footer__back {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer__back:hover { color: var(--accent); }
+
+/* ---------- 响应式（基础适配，后续按需细化） ---------- */
+@media (max-width: 1280px) {
+  .container { padding: 0 48px; }
+  .about__grid { grid-template-columns: 380px 1fr; gap: 60px; }
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+  .strengths__grid { grid-template-columns: repeat(2, 1fr); }
+  .ai__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .hero__title { flex-direction: column; gap: 12px; }
+  .about__grid, .projects__grid, .strengths__grid, .ai__grid,
+  .contact__list, .about__stats, .about__contact { grid-template-columns: 1fr; }
+  .timeline__item { grid-template-columns: 1fr; gap: 12px; }
+  .contact__item { border-right: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  .section { padding: 90px 0; }
+}
+</style></head>
+  <body>
+    <div id="root"><div class="page"><header class="nav "><div class="nav__progress" aria-hidden="true" style="transform: scaleX(0);"></div><div class="nav__inner container"><a href="#top" class="nav__logo">JT<span class="nav__logo-dot">®</span><span class="nav__logo-sub">JIANG TAO</span></a><nav class="nav__links"><a href="#about">关于我</a><a href="#projects">精选项目</a><a href="#strengths">个人优势</a><a href="#ai">AI 工作流</a></nav><a href="#contact" class="btn btn--outline btn--sm">联系我</a></div></header><main><section id="top" class="hero"><video class="hero__video" autoplay="" loop="" playsinline=""><source src="/hero.mp4" type="video/mp4"></video><canvas class="hero__canvas" aria-hidden="true" width="741" height="502"></canvas><div class="fallgal" aria-hidden="true"><div class="fallgal__cols"><div class="fallgal__col" style="--dur: 52s; --dim: 0.8;"><div class="fallgal__track"><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/haibao-07-lixia.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/shuangpinhui-03-booth-site.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-02.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/zhongjiu-04-parade.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-jingzhe.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-03-e.jpg" alt="" loading="lazy"></div></div><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/haibao-07-lixia.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/shuangpinhui-03-booth-site.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-02.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/zhongjiu-04-parade.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-jingzhe.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-03-e.jpg" alt="" loading="lazy"></div></div></div></div><div class="fallgal__col" style="--dur: 38s; --dim: 0.95;"><div class="fallgal__track is-rev"><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/bg-zheye.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-01.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/zhongjiu-01-drum.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/pharmchina-03-crowd.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-06-huoxiang.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/vi-01-logo.jpg" alt="" loading="lazy"></div></div><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/bg-zheye.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-01.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/zhongjiu-01-drum.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/pharmchina-03-crowd.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-06-huoxiang.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/vi-01-logo.jpg" alt="" loading="lazy"></div></div></div></div><div class="fallgal__col" style="--dur: 64s; --dim: 0.7;"><div class="fallgal__track"><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/lianweijia-02.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-jialiu.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-06.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/baozhuang-01-shihuang.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/pharmchina-01-gate.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-chenxiang.jpg" alt="" loading="lazy"></div></div><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/lianweijia-02.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-jialiu.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-06.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/baozhuang-01-shihuang.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/pharmchina-01-gate.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-chenxiang.jpg" alt="" loading="lazy"></div></div></div></div><div class="fallgal__col" style="--dur: 45s; --dim: 0.9;"><div class="fallgal__track is-rev"><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/baozhuang-03-jiuwuzui.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/vi-03-fuzhu-tuxing.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-xiaohan.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-02-laodongjie.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/shuangpinhui-01-gala.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-08-xieshien.jpg" alt="" loading="lazy"></div></div><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/baozhuang-03-jiuwuzui.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/vi-03-fuzhu-tuxing.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-xiaohan.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-02-laodongjie.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/shuangpinhui-01-gala.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-08-xieshien.jpg" alt="" loading="lazy"></div></div></div></div><div class="fallgal__col" style="--dur: 33s; --dim: 0.75;"><div class="fallgal__track"><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/haibao-03-chenxiangsan.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-01.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-03-a.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/lianweijia-05.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-08.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/jingqu-05-wine-garden.jpg" alt="" loading="lazy"></div></div><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/haibao-03-chenxiangsan.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-01.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-03-a.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/lianweijia-05.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-08.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/jingqu-05-wine-garden.jpg" alt="" loading="lazy"></div></div></div></div><div class="fallgal__col" style="--dur: 57s; --dim: 1;"><div class="fallgal__track is-rev"><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/bg-pop.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-01-jieeryin.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-04-shenwu.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-03-c.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/jingqu-01-wenboguan.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-04.jpg" alt="" loading="lazy"></div></div><div class="fallgal__stack"><div class="fallgal__item"><img src="/projects/bg-pop.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-01-jieeryin.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/haibao-04-shenwu.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/bg-aidale-03-c.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/jingqu-01-wenboguan.jpg" alt="" loading="lazy"></div><div class="fallgal__item"><img src="/projects/gaofang-04.jpg" alt="" loading="lazy"></div></div></div></div></div><div class="fallgal__veil"></div></div><div class="hero__mask"></div><div class="hero__content container"><p class="hero__kicker reveal"><span class="" style="display: inline-block; white-space: pre-wrap;"><span style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px;">BRAND DESIGNER / 企划设计 · 成都</span><span aria-hidden="true"><span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">B</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">R</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">^</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">A</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">N</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">D</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">D</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">_</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">E</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">S</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">}</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">I</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">_</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">G</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">#</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">N</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">E</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">{</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">R</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">}</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">/</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">企</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">[</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">划</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">设</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">#</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">计</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">+</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">·</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">成</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">!</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">都</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">?</span></span></span></span></span></p><h1 class="hero__title"><p class="" style="display: flex; flex-wrap: wrap;"><span style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px; user-select: none;">蒋涛</span><span style="display: inline-flex;"><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">蒋</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">涛</span></span></p><p class="hero__title-en" style="display: flex; flex-wrap: wrap;"><span style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px; user-select: none;">JIANG TAO</span><span style="display: inline-flex;"><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">J</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">I</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">A</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">N</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">G</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">&nbsp;</span></span><span style="display: inline-flex;"><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">T</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">A</span><span aria-hidden="true" style="display: inline-block; will-change: transform, filter, opacity; filter: blur(12px); opacity: 0; transform: translateY(-40px);">O</span></span></p></h1><p class="hero__sub reveal reveal--d2">企业品牌设计师 · 12 年企划设计经验<br>从品牌视觉到展会落地，从平面到新媒体，让每一次传播都有据可依、有形可感。</p><div class="hero__actions reveal reveal--d3"><a href="#projects" class="btn btn--solid">查看精选项目</a><a href="#contact" class="btn btn--outline">联系我</a></div></div><div class="hero__meta container reveal reveal--d4"><span>线上线下活动全案</span><i></i><span>展会参展执行</span><i></i><span>药品包装设计</span><i></i><span>新媒体内容</span><i></i><span>宣传画册</span></div><div class="hero__scroll" aria-hidden="true"><span></span></div></section><section id="about" class="about section"><div class="container"><p class="section__kicker"><span class="" style="display: inline-block; white-space: pre-wrap;"><span style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px;">01 / ABOUT</span><span aria-hidden="true"><span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">0</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">+</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">1</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">{</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">/</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">^</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">A</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">B</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">\</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">O</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">_</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">U</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">^</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">T</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">?</span></span></span></span></span></p><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(6px); opacity: 0; transform: translate(0px, 40px);"><h2 class="section__title">关于我</h2></div><div class="about__grid"><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; opacity: 0; transform: translate(50px, 0px);"><div class="about__portrait"><div class="about__portrait-frame"><img src="/avatar.jpg?v=2" alt="蒋涛"></div><div class="about__portrait-tag">CHENGDU · 成都</div></div></div><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 40px);"><div class="about__body"><p class="about__lead">你好，我是蒋涛。一名深耕医药、快消、家居行业的<span class="accent">企业品牌设计师（企划设计）</span>。</p><p class="about__text">12 年来，我的工作始终围绕「品牌如何被看见」展开：企业线上线下活动全案、 海报与易拉宝、展会参展执行、药品包装、公司宣传画册，以及公众号、视频号、 小红书、抖音等新媒体内容设计与拍摄剪辑。从华北制药的全国启动大会， 到连续五届的全国药交会展台落地，我习惯把每一个项目从头跟到尾—— 设计、印刷、布展、复盘，都亲手把关。</p><p class="about__text">我相信「世上没有无用的技能」：施工员出身让我懂落地，园林景观科班让我懂空间， 电商与 UI 经历让我懂线上。这些积累最终都汇成了更完整的企划设计能力。</p><ul class="about__contact"><li><span>电话</span><a href="tel:13550211277">135 5021 1277</a></li><li><span>邮箱</span><a href="mailto:937224093@qq.com">937224093@qq.com</a></li><li><span>坐标</span>成都 · 崇州</li><li><span>状态</span>可到岗 / 项目合作</li></ul><div class="about__stats"><div class="stat"><div class="stat__num"><span class="" style="font-variant-numeric: tabular-nums;"><span>0</span></span><em>年+</em></div><div class="stat__label">企划设计经验</div></div><div class="stat"><div class="stat__num"><span class="" style="font-variant-numeric: tabular-nums;"><span>0</span></span><em>届+</em></div><div class="stat__label">全国药交会全案执行</div></div><div class="stat"><div class="stat__num"><span class="" style="font-variant-numeric: tabular-nums;"><span>0</span></span><em>家</em></div><div class="stat__label">服务企业 / 品牌</div></div><div class="stat"><div class="stat__num"><span class="" style="font-variant-numeric: tabular-nums;"><span>0</span></span><em>+</em></div><div class="stat__label">设计交付物</div></div></div></div></div></div><div class="timeline"><h3 class="timeline__title">职业经历</h3><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(3px); opacity: 0; transform: translate(0px, 36px);"><div class="timeline__item"><div class="timeline__time">2024.10 — 至今</div><div class="timeline__main"><div class="timeline__head"><strong>成都恋唯家定制家居</strong><span class="timeline__role">平面设计</span></div><p>公司宣传、小红书 / 抖音 / 视频号 / 公众号内容设计，系列板材花色画册设计，官网网页规划设计。</p></div></div></div><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(3px); opacity: 0; transform: translate(0px, 36px);"><div class="timeline__item"><div class="timeline__time">2019.10 — 2024.09</div><div class="timeline__main"><div class="timeline__head"><strong>河南药业有限公司</strong><span class="timeline__role">企划设计</span></div><p>品牌对内宣传与对外推广、线上线下物料全案、药品包装设计、广告投放排期剪辑、历届国药会 / 双品会 / 星辰会等展会执行。</p></div></div></div><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(3px); opacity: 0; transform: translate(0px, 36px);"><div class="timeline__item"><div class="timeline__time">2019.02 — 2019.10</div><div class="timeline__main"><div class="timeline__head"><strong>华北制药盈健康膏方事业部</strong><span class="timeline__role">企划设计</span></div><p>事业部品牌推广设计：画册、单页、海报、会场氛围物料，公众号与线上课程画面设计，全国启动大会全案执行。</p></div></div></div><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(3px); opacity: 0; transform: translate(0px, 36px);"><div class="timeline__item"><div class="timeline__time">2018.04 — 2019.02</div><div class="timeline__main"><div class="timeline__head"><strong>四川爱达乐食品</strong><span class="timeline__role">平面设计 / AE</span></div><p>广宣设计（产品海报、DM、包装调整），三大节气活动延展与门店氛围物料对接落地。</p></div></div></div><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(3px); opacity: 0; transform: translate(0px, 36px);"><div class="timeline__item"><div class="timeline__time">2016.02 — 2018.04</div><div class="timeline__main"><div class="timeline__head"><strong>四川金盆地集团</strong><span class="timeline__role">平面设计</span></div><p>企业平面广告设计、大型原酒节（种酒节）活动执行、创 3A 工业旅游景区景观氛围设计、糖酒会等大型活动对接。</p></div></div></div></div></div></section><section id="projects" class="projects section"><div class="container"><p class="section__kicker"><span class="" style="display: inline-block; white-space: pre-wrap;"><span style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px;">02 / SELECTED WORKS</span><span aria-hidden="true"><span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">0</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">}</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">2</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">_</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">/</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">[</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">S</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">-</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">E</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">L</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">?</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">E</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">^</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">C</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">-</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">T</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">=</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">E</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">*</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">D</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">{</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">W</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">_</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">O</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">\</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">R</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">K</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&lt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">S</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">{</span></span></span></span></span></p><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(6px); opacity: 0; transform: translate(0px, 40px);"><h2 class="section__title">精选项目</h2></div><div class="projects__grid"><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 全国药交会 · 历届参展执行 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(13, 43, 40) 0%, rgb(22, 68, 61) 55%, rgb(31, 107, 92) 100%);"><img src="/projects/pharmchina-01-gate.jpg" alt="第 88 届全国药品交易会 · 2024 上海" loading="lazy"><span class="pcard__tag">展会全案</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 4 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2019 — 2024</span><h3>全国药交会 · 历届参展执行</h3></div><p>国药会全流程：前期宣传物料设计、展会视觉方案对接、印刷质量跟踪、现场布展与执行协调。图为第 88 届上海国药会现场。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 双品会 · 历届参展设计 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(12, 28, 51) 0%, rgb(20, 48, 79) 55%, rgb(29, 74, 117) 100%);"><img src="/projects/shuangpinhui-01-gala.jpg" alt="2024 国际大健康产业（重庆）博览会 · 第 9 届双品汇欢迎晚宴，产品荣登主舞台大屏" loading="lazy"><span class="pcard__tag">展会全案</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 4 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2019 — 2024</span><h3>双品会 · 历届参展设计</h3></div><p>医药双品会前期设计执行：宣传物料、视觉方案对接与印刷落地，提升现场品牌展示效果。图为第 9 届重庆双品汇现场。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 华北制药膏方事业部 · 品牌推广全案 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(34, 20, 51) 0%, rgb(53, 32, 78) 55%, rgb(75, 47, 110) 100%);"><img src="/projects/gaofang-01.jpg" alt="全国启动大会 · LED 主视觉画面" loading="lazy"><span class="pcard__tag">品牌推广</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 8 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2019.02 — 2019.10</span><h3>华北制药膏方事业部 · 品牌推广全案</h3></div><p>新事业部品牌从 0 到 1：全国启动大会主视觉与会场物料全案，膏方系列画册、中药健康手册、四大膏方产品海报及手提袋、桌垫等物料设计与印刷对接。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 药品包装 · 系列产品包装设计 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(16, 24, 32) 0%, rgb(28, 42, 56) 55%, rgb(43, 64, 85) 100%);"><img src="/projects/baozhuang-01-shihuang.jpg" alt="石黄抗菌胶囊 · 产品主视觉与包装设计" loading="lazy"><span class="pcard__tag">包装设计</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 6 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2023</span><h3>药品包装 · 系列产品包装设计</h3></div><p>石黄抗菌胶囊、牛黄解毒片、三黄片、蒲公英片、大山楂丸、酒无罪等多个产品的包装设计与印刷落地，覆盖处方药与健康食品。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 崇阳酒业 · 品牌 VI 视觉系统 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(37, 13, 16) 0%, rgb(69, 22, 28) 55%, rgb(103, 32, 41) 100%);"><img src="/projects/vi-00-cover.jpg" alt="品牌基础 · Logo 与设计说明" loading="lazy"><span class="pcard__tag">品牌 VI</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 8 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2016 — 2017</span><h3>崇阳酒业 · 品牌 VI 视觉系统</h3></div><p>崇阳酒业品牌 VI 全案：Logo 与标准字规范、辅助图形系统、办公应用与导视系统设计，贯穿品牌基础与应用两大体系。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 金盆地集团 · 原酒节（种酒节） 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(46, 33, 16) 0%, rgb(74, 53, 23) 55%, rgb(107, 76, 30) 100%);"><img src="/projects/zhongjiu-01-drum.jpg" alt="2017 第五届金盆地种酒节 · 活动主视觉鼓面与红毯现场" loading="lazy"><span class="pcard__tag">大型活动</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 5 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2016 — 2017</span><h3>金盆地集团 · 原酒节（种酒节）</h3></div><p>连续两届万人级传统文化活动：非遗结合、5 天主题日策划、全场视觉与氛围物料设计。图为崇阳 130 周年庆典暨第四届种酒节与 2017 第五届种酒节。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 金盆地 · 创 3A 工业旅游景区 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(16, 40, 15) 0%, rgb(28, 64, 25) 55%, rgb(42, 92, 36) 100%);"><img src="/projects/jingqu-01-wenboguan.jpg" alt="川酒文博馆 · 景观氛围改造后实景" loading="lazy"><span class="pcard__tag">空间视觉</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 6 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2016.10 — 2017.01</span><h3>金盆地 · 创 3A 工业旅游景区</h3></div><p>川酒文博馆与酿酒基地景观氛围改造：景点介绍牌、酒文化视觉系统设计与落地，助力金盆地成功创建国家 3A 级工业旅游景区。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 恋唯家定制家居 · 品牌内容矩阵 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(46, 18, 24) 0%, rgb(74, 30, 40) 55%, rgb(107, 43, 58) 100%);"><img src="/projects/lianweijia-00-cover.jpg" alt="恋唯家系列电子画册 · 系列铺排总览" loading="lazy"><span class="pcard__tag">品牌全案</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 7 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2024 — 至今</span><h3>恋唯家定制家居 · 品牌内容矩阵</h3></div><p>系列板材花色电子画册与色卡设计（五金玻璃 / 爱格 / Branoo / 膜类等多个系列）、官网网页规划、小红书 / 抖音 / 视频号 / 公众号内容设计与拍摄剪辑。图为系列电子画册页面。</p></div></article></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 56px);"><article class="pcard pcard--clickable" tabindex="0" role="button" aria-label="查看 医药品牌 · 传播海报精选 图集"><div class="pcard__media" style="background: linear-gradient(135deg, rgb(43, 15, 28) 0%, rgb(77, 26, 48) 55%, rgb(111, 37, 69) 100%);"><img src="/projects/haibao-00-cover.jpg" alt="洁尔阴软膏 · 产品备案海报（2026）" loading="lazy"><span class="pcard__tag">传播海报</span><span class="pcard__view" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>图集 · 8 张</span></div><div class="pcard__body"><div class="pcard__meta"><span class="pcard__year">2023 — 2026</span><h3>医药品牌 · 传播海报精选</h3></div><p>洁尔阴、八味沉香散、人参首乌胶囊、唐王咽炎片等产品的备案海报、朋友圈海报、节气热点与招商海报设计，覆盖全年传播节点。</p></div></article></div></div></div></section><section id="strengths" class="strengths section"><div class="container"><p class="section__kicker"><span class="" style="display: inline-block; white-space: pre-wrap;"><span style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px;">03 / STRENGTHS</span><span aria-hidden="true"><span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">0</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">-</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">3</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">?</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">/</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">S</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">T</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">*</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">R</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">-</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">E</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">^</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">N</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">{</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">G</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">*</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">T</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&gt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">H</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">^</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">S</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&lt;</span></span></span></span></span></p><h2 class="section__title">个人优势</h2><div class="strengths__grid"><div class="spotlight-card scard" style="--spotlight-card-surface: #111111; --spotlight-card-border: rgba(255, 255, 255, 0.08); --spotlight-card-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);"><span class="spotlight-card__light" aria-hidden="true" style="background: radial-gradient(280px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 13.97%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.94%, transparent 2.06%) 20.11%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 92.07%, transparent 7.93%) 26.26%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 83.12%, transparent 16.88%) 32.4%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 72.11%, transparent 27.89%) 38.55%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 60.1%, transparent 39.9%) 44.69%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 48.08%, transparent 51.92%) 50.84%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 36.82%, transparent 63.18%) 56.98%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 26.85%, transparent 73.15%) 63.13%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 18.47%, transparent 81.53%) 69.27%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 11.75%, transparent 88.25%) 75.42%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 6.67%, transparent 93.33%) 81.56%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 3.1%, transparent 96.9%) 87.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.91%, transparent 99.09%) 93.85%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span><span class="spotlight-card__grain" aria-hidden="true" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); mask-image: none; opacity: 0;"></span><span class="scard__no">01</span><h3>品牌企划与活动全案</h3><p>企业线上线下活动从创意、设计到落地执行的全链路把控：年会、节庆、门店氛围、发布会物料均可独立操盘。</p><div class="scard__tags"><span>活动全案</span><span>海报</span><span>易拉宝</span><span>会场氛围</span></div><span class="spotlight-card__border" aria-hidden="true"></span><span class="spotlight-card__edge" aria-hidden="true" style="background: radial-gradient(168px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.68%, transparent 2.32%) 7.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 91.04%, transparent 8.96%) 14.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 80.95%, transparent 19.05%) 21.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 68.66%, transparent 31.34%) 28.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 55.5%, transparent 44.5%) 35.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 42.69%, transparent 57.31%) 42.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 31.17%, transparent 68.83%) 50%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 21.49%, transparent 78.51%) 57.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 13.89%, transparent 86.11%) 64.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 8.3%, transparent 91.7%) 71.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 4.47%, transparent 95.53%) 78.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 2.06%, transparent 97.94%) 85.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.68%, transparent 99.32%) 92.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span></div><div class="spotlight-card scard" style="--spotlight-card-surface: #111111; --spotlight-card-border: rgba(255, 255, 255, 0.08); --spotlight-card-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);"><span class="spotlight-card__light" aria-hidden="true" style="background: radial-gradient(280px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 13.97%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.94%, transparent 2.06%) 20.11%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 92.07%, transparent 7.93%) 26.26%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 83.12%, transparent 16.88%) 32.4%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 72.11%, transparent 27.89%) 38.55%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 60.1%, transparent 39.9%) 44.69%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 48.08%, transparent 51.92%) 50.84%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 36.82%, transparent 63.18%) 56.98%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 26.85%, transparent 73.15%) 63.13%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 18.47%, transparent 81.53%) 69.27%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 11.75%, transparent 88.25%) 75.42%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 6.67%, transparent 93.33%) 81.56%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 3.1%, transparent 96.9%) 87.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.91%, transparent 99.09%) 93.85%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span><span class="spotlight-card__grain" aria-hidden="true" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); mask-image: none; opacity: 0;"></span><span class="scard__no">02</span><h3>展会参展执行</h3><p>连续五年负责全国药交会、双品会、星辰会等大型行业展会：视觉方案、印刷跟产、现场布展一岗到底。</p><div class="scard__tags"><span>国药会</span><span>双品会</span><span>布展执行</span></div><span class="spotlight-card__border" aria-hidden="true"></span><span class="spotlight-card__edge" aria-hidden="true" style="background: radial-gradient(168px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.68%, transparent 2.32%) 7.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 91.04%, transparent 8.96%) 14.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 80.95%, transparent 19.05%) 21.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 68.66%, transparent 31.34%) 28.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 55.5%, transparent 44.5%) 35.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 42.69%, transparent 57.31%) 42.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 31.17%, transparent 68.83%) 50%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 21.49%, transparent 78.51%) 57.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 13.89%, transparent 86.11%) 64.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 8.3%, transparent 91.7%) 71.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 4.47%, transparent 95.53%) 78.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 2.06%, transparent 97.94%) 85.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.68%, transparent 99.32%) 92.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span></div><div class="spotlight-card scard" style="--spotlight-card-surface: #111111; --spotlight-card-border: rgba(255, 255, 255, 0.08); --spotlight-card-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);"><span class="spotlight-card__light" aria-hidden="true" style="background: radial-gradient(280px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 13.97%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.94%, transparent 2.06%) 20.11%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 92.07%, transparent 7.93%) 26.26%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 83.12%, transparent 16.88%) 32.4%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 72.11%, transparent 27.89%) 38.55%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 60.1%, transparent 39.9%) 44.69%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 48.08%, transparent 51.92%) 50.84%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 36.82%, transparent 63.18%) 56.98%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 26.85%, transparent 73.15%) 63.13%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 18.47%, transparent 81.53%) 69.27%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 11.75%, transparent 88.25%) 75.42%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 6.67%, transparent 93.33%) 81.56%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 3.1%, transparent 96.9%) 87.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.91%, transparent 99.09%) 93.85%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span><span class="spotlight-card__grain" aria-hidden="true" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); mask-image: none; opacity: 0;"></span><span class="scard__no">03</span><h3>包装与画册设计</h3><p>药品包装设计经验，熟悉合规与印刷规范；板材花色画册、企业宣传画册的编排与印制全流程。</p><div class="scard__tags"><span>药品包装</span><span>画册编排</span><span>印刷跟单</span></div><span class="spotlight-card__border" aria-hidden="true"></span><span class="spotlight-card__edge" aria-hidden="true" style="background: radial-gradient(168px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.68%, transparent 2.32%) 7.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 91.04%, transparent 8.96%) 14.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 80.95%, transparent 19.05%) 21.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 68.66%, transparent 31.34%) 28.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 55.5%, transparent 44.5%) 35.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 42.69%, transparent 57.31%) 42.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 31.17%, transparent 68.83%) 50%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 21.49%, transparent 78.51%) 57.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 13.89%, transparent 86.11%) 64.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 8.3%, transparent 91.7%) 71.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 4.47%, transparent 95.53%) 78.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 2.06%, transparent 97.94%) 85.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.68%, transparent 99.32%) 92.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span></div><div class="spotlight-card scard" style="--spotlight-card-surface: #111111; --spotlight-card-border: rgba(255, 255, 255, 0.08); --spotlight-card-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);"><span class="spotlight-card__light" aria-hidden="true" style="background: radial-gradient(280px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 13.97%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.94%, transparent 2.06%) 20.11%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 92.07%, transparent 7.93%) 26.26%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 83.12%, transparent 16.88%) 32.4%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 72.11%, transparent 27.89%) 38.55%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 60.1%, transparent 39.9%) 44.69%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 48.08%, transparent 51.92%) 50.84%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 36.82%, transparent 63.18%) 56.98%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 26.85%, transparent 73.15%) 63.13%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 18.47%, transparent 81.53%) 69.27%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 11.75%, transparent 88.25%) 75.42%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 6.67%, transparent 93.33%) 81.56%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 3.1%, transparent 96.9%) 87.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.91%, transparent 99.09%) 93.85%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span><span class="spotlight-card__grain" aria-hidden="true" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); mask-image: none; opacity: 0;"></span><span class="scard__no">04</span><h3>新媒体内容矩阵</h3><p>公众号推文、视频号、小红书、抖音内容设计与发布排期，懂平台调性，也懂流量逻辑。</p><div class="scard__tags"><span>小红书</span><span>抖音</span><span>公众号</span><span>视频号</span></div><span class="spotlight-card__border" aria-hidden="true"></span><span class="spotlight-card__edge" aria-hidden="true" style="background: radial-gradient(168px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.68%, transparent 2.32%) 7.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 91.04%, transparent 8.96%) 14.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 80.95%, transparent 19.05%) 21.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 68.66%, transparent 31.34%) 28.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 55.5%, transparent 44.5%) 35.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 42.69%, transparent 57.31%) 42.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 31.17%, transparent 68.83%) 50%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 21.49%, transparent 78.51%) 57.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 13.89%, transparent 86.11%) 64.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 8.3%, transparent 91.7%) 71.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 4.47%, transparent 95.53%) 78.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 2.06%, transparent 97.94%) 85.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.68%, transparent 99.32%) 92.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span></div><div class="spotlight-card scard" style="--spotlight-card-surface: #111111; --spotlight-card-border: rgba(255, 255, 255, 0.08); --spotlight-card-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);"><span class="spotlight-card__light" aria-hidden="true" style="background: radial-gradient(280px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 13.97%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.94%, transparent 2.06%) 20.11%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 92.07%, transparent 7.93%) 26.26%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 83.12%, transparent 16.88%) 32.4%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 72.11%, transparent 27.89%) 38.55%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 60.1%, transparent 39.9%) 44.69%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 48.08%, transparent 51.92%) 50.84%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 36.82%, transparent 63.18%) 56.98%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 26.85%, transparent 73.15%) 63.13%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 18.47%, transparent 81.53%) 69.27%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 11.75%, transparent 88.25%) 75.42%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 6.67%, transparent 93.33%) 81.56%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 3.1%, transparent 96.9%) 87.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.91%, transparent 99.09%) 93.85%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span><span class="spotlight-card__grain" aria-hidden="true" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); mask-image: none; opacity: 0;"></span><span class="scard__no">05</span><h3>摄影摄像与剪辑</h3><p>产品与活动现场的拍摄、短视频剪辑、广告投放素材的排期与分发，让素材从拍摄到上线不断档。</p><div class="scard__tags"><span>产品摄影</span><span>短视频剪辑</span><span>投放素材</span></div><span class="spotlight-card__border" aria-hidden="true"></span><span class="spotlight-card__edge" aria-hidden="true" style="background: radial-gradient(168px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.68%, transparent 2.32%) 7.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 91.04%, transparent 8.96%) 14.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 80.95%, transparent 19.05%) 21.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 68.66%, transparent 31.34%) 28.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 55.5%, transparent 44.5%) 35.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 42.69%, transparent 57.31%) 42.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 31.17%, transparent 68.83%) 50%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 21.49%, transparent 78.51%) 57.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 13.89%, transparent 86.11%) 64.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 8.3%, transparent 91.7%) 71.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 4.47%, transparent 95.53%) 78.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 2.06%, transparent 97.94%) 85.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.68%, transparent 99.32%) 92.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span></div><div class="spotlight-card scard" style="--spotlight-card-surface: #111111; --spotlight-card-border: rgba(255, 255, 255, 0.08); --spotlight-card-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.6);"><span class="spotlight-card__light" aria-hidden="true" style="background: radial-gradient(280px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 13.97%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.94%, transparent 2.06%) 20.11%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 92.07%, transparent 7.93%) 26.26%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 83.12%, transparent 16.88%) 32.4%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 72.11%, transparent 27.89%) 38.55%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 60.1%, transparent 39.9%) 44.69%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 48.08%, transparent 51.92%) 50.84%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 36.82%, transparent 63.18%) 56.98%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 26.85%, transparent 73.15%) 63.13%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 18.47%, transparent 81.53%) 69.27%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 11.75%, transparent 88.25%) 75.42%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 6.67%, transparent 93.33%) 81.56%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 3.1%, transparent 96.9%) 87.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.91%, transparent 99.09%) 93.85%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span><span class="spotlight-card__grain" aria-hidden="true" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); mask-image: none; opacity: 0;"></span><span class="scard__no">06</span><h3>跨部门协作与落地</h3><p>施工员与 AE 经历练出来的沟通能力：对接广告公司、印刷厂、场馆与业务部门，确保方案不折损地落地。</p><div class="scard__tags"><span>供应商管理</span><span>现场执行</span><span>跨部门协同</span></div><span class="spotlight-card__border" aria-hidden="true"></span><span class="spotlight-card__edge" aria-hidden="true" style="background: radial-gradient(168px at 0px 0px, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 100%, transparent 0%) 0%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 97.68%, transparent 2.32%) 7.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 91.04%, transparent 8.96%) 14.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 80.95%, transparent 19.05%) 21.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 68.66%, transparent 31.34%) 28.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 55.5%, transparent 44.5%) 35.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 42.69%, transparent 57.31%) 42.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 31.17%, transparent 68.83%) 50%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 21.49%, transparent 78.51%) 57.14%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 13.89%, transparent 86.11%) 64.29%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 8.3%, transparent 91.7%) 71.43%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 4.47%, transparent 95.53%) 78.57%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 2.06%, transparent 97.94%) 85.71%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0.68%, transparent 99.32%) 92.86%, color-mix(in srgb, rgba(79, 227, 193, 0.2) 0%, transparent 100%) 100%); opacity: 0;"></span></div></div></div></section><section id="ai" class="ai section"><div class="container"><div class="ai__head"><div><p class="section__kicker"><span class="" style="display: inline-block; white-space: pre-wrap;"><span style="position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border: 0px;">04 / AI WORKFLOW</span><span aria-hidden="true"><span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">0</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">?</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">4</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">{</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">/</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">/</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">A</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">^</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">I</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">*</span></span></span> <span style="white-space: nowrap;"><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">W</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">\</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">O</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">&lt;</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">R</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">#</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">K</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">\</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">F</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">+</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">L</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">}</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">O</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">*</span></span><span class="" style="position: relative; display: inline-block;"><span style="visibility: hidden;">W</span><span style="position: absolute; top: 0px; left: 50%; transform: translateX(-50%);">*</span></span></span></span></span></p><div class="" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(6px); opacity: 0; transform: translate(0px, 40px);"><h2 class="section__title">AI 工具 · 协助工作流</h2></div><p class="ai__lead">AI 不替代设计判断，它放大执行效率。<br>我把 AI 工具嵌进了从创意到发布的完整链路：</p></div><div class="ai__tools"><span>Midjourney</span><span>即梦 AI</span><span>Stable Diffusion</span><span>LLM 文案辅助</span><span>剪映 AI</span><span>PS 创成式填充</span></div></div><div class="ai__grid"><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 48px);"><div class="ai__card"><div class="ai__step"><span>STEP 01</span><i class=""></i></div><h3>创意发散</h3><p>用 Midjourney / 即梦 快速产出概念方向与情绪板，在提案前先对齐「感觉」，减少反复改稿。</p></div></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 48px);"><div class="ai__card"><div class="ai__step"><span>STEP 02</span><i class=""></i></div><h3>素材生产</h3><p>AI 抠图、扩图、老图高清修复与场景合成，产品图与活动图的素材处理效率翻倍。</p></div></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 48px);"><div class="ai__card"><div class="ai__step"><span>STEP 03</span><i class=""></i></div><h3>文案与内容</h3><p>借助 LLM 辅助公众号推文、小红书文案的初稿撰写与标题打磨，设计师自己就能闭环内容产出。</p></div></div><div class="ac-fill" style="visibility: visible; translate: none; rotate: none; scale: none; filter: blur(4px); opacity: 0; transform: translate(0px, 48px);"><div class="ai__card"><div class="ai__step"><span>STEP 04</span><i class="last"></i></div><h3>剪辑提效</h3><p>剪映 AI 字幕、智能剪口播、文生配音，让视频号 / 抖音短视频从拍摄到发布更快一轮。</p></div></div></div></div></section><section id="contact" class="contact"><div class="contact__inner container"><p class="contact__kicker">05 / CONTACT</p><h2 class="contact__title">让下一个项目<br><span class="accent">被更多人看见。</span></h2><p class="contact__sub">求职 / 项目合作 / 自由设计委托，欢迎随时联系 —— 电话、微信、邮件都可以。</p><div class="contact__list"><a class="contact__item" href="tel:13550211277" rel="noreferrer"><span class="contact__label">PHONE</span><span class="contact__value">135 5021 1277</span></a><a class="contact__item" href="mailto:937224093@qq.com" rel="noreferrer"><span class="contact__label">EMAIL</span><span class="contact__value">937224093@qq.com</span></a><a class="contact__item" rel="noreferrer"><span class="contact__label">WECHAT</span><span class="contact__value">13550211277（微信同号）</span></a></div><footer class="footer"><span>© 2026 蒋涛 JIANG TAO · 品牌企划设计师</span><span class="footer__back">回到顶部 ↑</span></footer></div><div class="contact__glow" aria-hidden="true"></div></section></main></div></div>
+    <script type="module" src="/src/main.jsx?t=1793454959665"></script>
+  
+
+</body></html>
