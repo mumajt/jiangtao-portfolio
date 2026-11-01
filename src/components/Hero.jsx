@@ -70,8 +70,8 @@ export default function Hero() {
           />
         </h1>
         <p className="hero__sub reveal reveal--d2">
-          企业品牌设计师 · 12 年企划设计经验<br />
-          从品牌视觉到展会落地，从平面到新媒体，让每一次传播都有据可依、有形可感。
+          企业品牌设计师 · 12 年品牌设计与市场企划经验<br />
+          从品牌视觉到展会落地，设计 / 文案 / 拍摄一体化执行，善用 AI 工具让每一次传播都有据可依、有形可感。
         </p>
         <div className="hero__actions reveal reveal--d3">
           <a href="#projects" className="btn btn--solid">查看精选项目</a>

@@ -4,9 +4,9 @@ import AnimatedContent from './rb/AnimatedContent.jsx'
 import SectionHead from './SectionHead.jsx'
 
 const SKILLS = [
-  { name: 'Photoshop / Illustrator', level: 95 },
+  { name: 'Photoshop / Illustrator / InDesign', level: 95 },
   { name: 'CorelDRAW', level: 88 },
-  { name: 'Premiere / 剪映专业版', level: 82 },
+  { name: 'Premiere / After Effects / 剪映', level: 82 },
   { name: 'Midjourney / SD / 即梦 AI', level: 85 },
 ]
 
