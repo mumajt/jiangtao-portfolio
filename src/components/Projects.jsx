@@ -4,7 +4,8 @@ import DecryptedText from './rb/DecryptedText.jsx'
 import AnimatedContent from './rb/AnimatedContent.jsx'
 import SectionHead from './SectionHead.jsx'
 
-const P = (name) => `projects/${name}`
+// 图片已统一转为 WebP（原 JPG 备份于 _images-backup/）
+const P = (name) => `projects/${name.replace(/\.jpg$/, '.webp')}`
 
 const PROJECTS = [
   {

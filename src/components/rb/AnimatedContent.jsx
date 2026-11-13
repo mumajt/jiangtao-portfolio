@@ -89,10 +89,12 @@ const AnimatedContent = ({
         ease
       };
 
-      if (blur > 0) {
-        from.filter = `blur(${blur}px)`;
-        to.filter = 'blur(0px)';
-      }
+      // 性能优化：blur 滤镜动画会触发逐帧重绘，滚动触发时（20+ 处）极易掉帧，
+      // 这里禁用 blur 过渡，保留位移 + 透明度动画（视觉差异极小，性能提升明显）
+      // if (blur > 0) {
+      //   from.filter = `blur(${blur}px)`;
+      //   to.filter = 'blur(0px)';
+      // }
       if (rotate) {
         from.rotation = rotate * sign;
         to.rotation = 0;

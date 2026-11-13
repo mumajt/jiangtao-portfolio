@@ -78,6 +78,7 @@ export default function Lightbox({ project, index: initialIndex = 0, onClose }) 
                 className="lightbox__img"
                 src={current.src}
                 alt={current.caption}
+                decoding="async"
               />
               <p className="lightbox__caption">
                 {current.caption}

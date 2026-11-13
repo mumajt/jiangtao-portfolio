@@ -15,6 +15,7 @@ export default function CanvasBG({ className = '' }) {
     let w = 0
     let h = 0
     let dpr = 1
+    let visible = true
 
     const particles = Array.from({ length: 70 }, () => ({
       x: Math.random(),
@@ -74,14 +75,27 @@ export default function CanvasBG({ className = '' }) {
         ctx.fill()
       }
 
-      raf = requestAnimationFrame(draw)
+      raf = visible ? requestAnimationFrame(draw) : 0
     }
 
     resize()
     window.addEventListener('resize', resize)
     raf = requestAnimationFrame(draw)
+
+    // 性能优化：滚出视口后停止绘制，回到视口再恢复（省 GPU/CPU）
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting
+        if (visible && !raf) raf = requestAnimationFrame(draw)
+        if (!visible && raf) { cancelAnimationFrame(raf); raf = 0 }
+      },
+      { threshold: 0 }
+    )
+    io.observe(canvas)
+
     return () => {
       cancelAnimationFrame(raf)
+      io.disconnect()
       window.removeEventListener('resize', resize)
     }
   }, [])

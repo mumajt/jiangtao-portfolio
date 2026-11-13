@@ -52,13 +52,13 @@ export default function About() {
         </SectionHead>
 
         <div className="about__grid">
-          {/* 人物图：把头像放到 public/avatar.jpg 即可替换占位图 */}
+          {/* 人物图：把头像放到 public/avatar.webp 即可替换占位图 */}
           <AnimatedContent direction="horizontal" distance={50} duration={0.9}>
             <div className="about__portrait">
               <div className="about__portrait-frame">
                 {avatarOk && (
                   <img
-                    src="avatar.jpg?v=3"
+                    src="avatar.webp?v=3"
                     alt="蒋涛"
                     onError={() => setAvatarOk(false)}
                   />
