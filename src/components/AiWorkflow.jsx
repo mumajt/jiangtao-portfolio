@@ -6,7 +6,7 @@ const FLOW = [
   {
     step: 'STEP 01',
     title: '创意发散',
-    desc: '用 Midjourney / 即梦 快速产出概念方向与情绪板，在提案前先对齐「感觉」，减少反复改稿。',
+    desc: '用即梦 / 可画 快速产出概念方向与情绪板，在提案前先对齐「感觉」，减少反复改稿。',
   },
   {
     step: 'STEP 02',
@@ -50,9 +50,8 @@ export default function AiWorkflow() {
             </p>
           </div>
           <div className="ai__tools">
-            <span>Midjourney</span>
             <span>即梦 AI</span>
-            <span>Stable Diffusion</span>
+            <span>可画</span>
             <span>LLM 文案辅助</span>
             <span>剪映 AI</span>
             <span>PS 创成式填充</span>

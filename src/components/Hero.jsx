@@ -70,7 +70,7 @@ export default function Hero() {
           />
         </h1>
         <p className="hero__sub reveal reveal--d2">
-          企业品牌设计师 · 12 年品牌设计与市场企划经验<br />
+          企划设计师 · 12 年品牌设计与市场企划经验<br />
           从品牌视觉到展会落地，设计 / 文案 / 拍摄一体化执行，善用 AI 工具让每一次传播都有据可依、有形可感。
         </p>
         <div className="hero__actions reveal reveal--d3">
@@ -80,7 +80,7 @@ export default function Hero() {
       </div>
 
       <div className="hero__meta container reveal reveal--d4">
-        <span>线上线下活动全案</span><i />
+        <span>线上线下活动视觉执行</span><i />
         <span>展会参展执行</span><i />
         <span>药品包装设计</span><i />
         <span>新媒体内容</span><i />
