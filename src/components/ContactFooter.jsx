@@ -21,6 +21,7 @@ export default function ContactFooter() {
           <BlurText text="被更多人看见。" className="grad" animateBy="letters" delay={420} blur={10} distance={30} />
         </h2>
         <p className="contact__sub">
+          求职意向：企划设计 / 品牌企划 · 成都<br />
           求职 / 项目合作 / 自由设计委托，欢迎随时联系 —— 电话、微信、邮件都可以。
         </p>
 

@@ -9,45 +9,13 @@ const P = (name) => `projects/${name.replace(/\.jpg$/, '.webp')}`
 
 const PROJECTS = [
   {
-    year: '2019 — 2024',
-    tag: '展会执行',
-    cat: 'event',
-    title: '全国药交会 · 历届参展执行',
-    desc: '国药会全流程：前期宣传物料设计、展会视觉方案对接、印刷质量跟踪、现场布展与执行协调。图为第 88 届上海国药会现场。',
-    role: '邀请函、海报与展架设计 / 视觉方案对接 / 印刷跟产 / 现场布展执行',
-    results: '连续 5 届（2019 — 2024）全国药交会参展全流程执行，覆盖上海等多地展会',
-    tone: 'teal',
-    gallery: [
-      { src: P('pharmchina-01-gate.jpg'), caption: '第 88 届全国药品交易会 · 2024 上海' },
-      { src: P('pharmchina-02-booth-design.jpg'), caption: '展位设计方案效果图' },
-      { src: P('pharmchina-03-crowd.jpg'), caption: '展位现场 · 产品陈列与洽谈区' },
-      { src: P('pharmchina-04-visitors.jpg'), caption: '现场观众翻阅产品画册' },
-    ],
-  },
-  {
-    year: '2019 — 2024',
-    tag: '展会执行',
-    cat: 'event',
-    title: '双品会 · 历届参展设计',
-    desc: '医药双品会前期设计执行：宣传物料、视觉方案对接与印刷落地，提升现场品牌展示效果。图为第 9 届重庆双品汇现场。',
-    role: '宣传物料设计 / 视觉方案对接 / 印刷落地跟进',
-    results: '多届双品汇参展执行，产品登上第 9 届双品汇欢迎晚宴主舞台大屏',
-    tone: 'blue',
-    gallery: [
-      { src: P('shuangpinhui-01-gala.jpg'), caption: '2024 国际大健康产业（重庆）博览会 · 第 9 届双品汇欢迎晚宴，产品荣登主舞台大屏' },
-      { src: P('shuangpinhui-02-booth-design.jpg'), caption: '展位设计方案效果图' },
-      { src: P('shuangpinhui-03-booth-site.jpg'), caption: '济世药业展位现场 · 品牌形象与产品展示' },
-      { src: P('shuangpinhui-04-negotiation.jpg'), caption: '展位洽谈区 · 客商咨询对接' },
-    ],
-  },
-  {
     year: '2019.02 — 2019.10',
-    tag: '品牌推广',
+    tag: '项目一 · 品牌从零启动',
     cat: 'brand',
-    title: '华北制药膏方事业部 · 品牌推广启动',
-    desc: '新事业部品牌从 0 到 1：全国启动大会主视觉与会场物料设计，膏方系列画册、中药健康手册、四大膏方产品海报及手提袋、桌垫等物料设计与印刷对接。',
-    role: '事业部品牌视觉设计（0 → 1）：主视觉、画册、包装海报、会场物料',
-    results: '全国启动大会主视觉及 30+ 项物料设计并完成印刷落地',
+    title: '华北制药膏方事业部 · 品牌视觉体系搭建',
+    desc: '品牌的起点不是 logo，而是它对市场的第一句话。新事业部无任何视觉资产：LED 主屏、横幅、门型展架，到邀请函、桌垫、名片模板，二十余项物料共用同一套主视觉延展——保证会场任何角度看到的是同一个品牌。设计之外，负责印刷对接与打样确认，大会如期召开。',
+    role: '主视觉延展设计 / 全部物料设计 / 印刷对接与落地跟踪',
+    results: '二十余项物料如期落地；产品画册沿用为全国各省区招商标配物料',
     tone: 'violet',
     gallery: [
       { src: P('gaofang-01.jpg'), caption: '全国启动大会 · LED 主视觉画面' },
@@ -61,13 +29,56 @@ const PROJECTS = [
     ],
   },
   {
-    year: '2023',
-    tag: '包装设计',
+    year: '2019 — 2024',
+    tag: '项目二 · 展会执行',
+    cat: 'event',
+    title: '全国医药展会 · 视觉执行与现场落地',
+    desc: '展会是公司年度核心获客场景，品牌与客户之间只有一米的距离。连续 5 年与市场部协作，深度参与历届全国药交会、双品汇、星辰会、中国药品大会：作为对接乙方设计公司的枢纽把控视觉方案落地，独立完成邀请函与现场海报、展架设计，展前上样参展、会后公众号传播——把每一届展会当作一次系统交付。',
+    role: '视觉方案对接 / 邀请函·海报·展架设计 / 现场执行 / 会后传播',
+    results: '连续 5 年 · 单届落地物料十余项 · 零延期、零印刷事故',
+    tone: 'teal',
+    gallery: [
+      { src: P('pharmchina-01-gate.jpg'), caption: '第 88 届全国药品交易会 · 2024 上海' },
+      { src: P('pharmchina-02-booth-design.jpg'), caption: '展位设计方案效果图' },
+      { src: P('pharmchina-03-crowd.jpg'), caption: '展位现场 · 产品陈列与洽谈区' },
+      { src: P('pharmchina-04-visitors.jpg'), caption: '现场观众翻阅产品画册' },
+      { src: P('shuangpinhui-01-gala.jpg'), caption: '第 9 届双品汇欢迎晚宴 · 产品荣登主舞台大屏（重庆）' },
+      { src: P('shuangpinhui-02-booth-design.jpg'), caption: '双品汇展位设计方案效果图' },
+      { src: P('shuangpinhui-03-booth-site.jpg'), caption: '济世药业展位现场 · 品牌形象与产品展示' },
+      { src: P('shuangpinhui-04-negotiation.jpg'), caption: '展位洽谈区 · 客商咨询对接' },
+    ],
+  },
+  {
+    year: '2024.10 — 至今',
+    tag: '项目三 · Every Touchpoint',
+    cat: 'brand',
+    title: '恋唯家 & 嘉栩木业 · 从纸间到指尖',
+    desc: '全屋定制这行生意难在信任：客户签单时柜子还没生产。我为恋唯家、嘉栩两品牌搭建标准化电子色卡体系，落地 15 个产品系列；配套工艺、五金等 3 部产品画册共 18 册——企业简介与品牌定位打底，花色全览一页索引全部色号，一页一色，饰面实拍、肌理文案与色号参数条逐页排清。嘉栩 GALLUX 品牌标志及 VI 应用亦由本人设计。同一套产品语言，串联画册、名片小程序、双官网与四端内容——从纸间到指尖。',
+    role: '电子色卡体系与结构模板 / 嘉栩标志与 VI / 企业微信名片与小程序界面 / 四端内容视觉',
+    results: '15 个系列电子色卡 + 3 部产品画册共 18 册；新品上市当天即完成四端内容上线',
+    tone: 'rose',
+    gallery: [
+      { src: P('lianweijia-00-cover.jpg'), caption: '系列电子画册 · 铺排总览' },
+      { src: P('lwj-seka01.jpg'), caption: '系列电子色卡 · 品牌定位与花色总览' },
+      { src: P('lwj-seka02.jpg'), caption: '电子色卡 · 花色全览（全部色号一页索引）' },
+      { src: P('lwj-seka03.jpg'), caption: '电子色卡内页 · 一页一色：饰面实拍、肌理文案与色号参数条' },
+      { src: P('lwj-seka04.jpg'), caption: '电子色卡内页 · 一页一色（另一花色）' },
+      { src: P('lianweijia-05.jpg'), caption: '《膜类系列电子色卡合集》· 色彩分组总览' },
+      { src: P('lwj-gxlogo.jpg'), caption: '嘉栩 GALLUX 品牌标志设计（本人设计）· VI 标准组合' },
+      { src: P('lwj-card.jpg'), caption: '企业微信名片 · 从界面到内容搭建，装进业务员的每张名片' },
+      { src: P('lwj-mp.jpg'), caption: '恋唯家产品小程序 · 门店的板材墙装进客户手机' },
+      { src: P('lwj-web.jpg'), caption: '恋唯家官网 · 客户线上认识品牌的第一触点' },
+      { src: P('lwj-gzh.jpg'), caption: '公众号推文头图 · 一产品一推文，新品上市当天上线' },
+    ],
+  },
+  {
+    year: '2019 — 2024',
+    tag: '包装与合规',
     cat: 'print',
-    title: '药品包装 · 系列产品包装设计',
-    desc: '石黄抗菌胶囊、牛黄解毒片、三黄片、蒲公英片、大山楂丸、酒无罪等多个产品的包装设计与印刷落地，覆盖处方药与健康食品。',
+    title: '药品包装 & 广审画面',
+    desc: 'OTC 药品的包装与广审物料：包装版式、条码拼版、广审海报画面——功效表述与广告语严格遵循备案规范，在合规框架内做出清晰、有卖相的画面。规范越多，越见功底。',
     role: '包装设计 / 印刷对接 / 平面展开图与立体效果图输出',
-    results: '6+ 个产品包装设计并上市，覆盖处方药与健康食品线',
+    results: '6+ 个产品包装设计并上市；历次备案均顺利过审，保障产品推广节奏',
     tone: 'steel',
     gallery: [
       { src: P('baozhuang-01-shihuang.jpg'), caption: '石黄抗菌胶囊 · 产品主视觉与包装设计' },
@@ -76,6 +87,27 @@ const PROJECTS = [
       { src: P('baozhuang-04-shanzhawan.jpg'), caption: '大山楂丸袋装 · 包装效果图' },
       { src: P('baozhuang-05-shihuang-flat.jpg'), caption: '石黄抗菌胶囊 · 包装平面展开图' },
       { src: P('baozhuang-06-sanhuang.jpg'), caption: '三黄片（山东）· 包装平面设计' },
+    ],
+  },
+  {
+    year: '2016 — 2017',
+    tag: '大型活动 · 空间视觉',
+    cat: 'event',
+    title: '金盆地种酒节 & 创 3A 工业旅游景区',
+    desc: '连续两届万人级传统文化活动：第 4 届逢崇阳酒业 130 周年、连续 5 天多主题活动，第 5 届与四川非遗跨界结合——从主画面到现场氛围统一连贯，支撑种酒节成长为崇州本地有影响力的文化节庆 IP。同期负责川酒文博馆创 3A 景区的景点介绍牌与酒文化氛围改造设计，助力成功创建国家 3A 级工业旅游景区。',
+    role: '活动主视觉与全场氛围物料设计 / 现场执行跟踪 / 景区导视与文化氛围设计',
+    results: '连续两届种酒节视觉统一连贯落地；助力金盆地成功创建国家 3A 级景区',
+    tone: 'amber',
+    gallery: [
+      { src: P('zhongjiu-01-drum.jpg'), caption: '2017 第五届金盆地种酒节 · 活动主视觉鼓面与红毯现场' },
+      { src: P('zhongjiu-02-stage-4th.jpg'), caption: '崇阳 130 周年庆典暨第四届种酒节主舞台（成都·崇州）' },
+      { src: P('zhongjiu-03-ceremony.jpg'), caption: '「休明盛世 · 开坛放酒」仪式环节' },
+      { src: P('zhongjiu-04-parade.jpg'), caption: '祭酒仪仗入场 · 传统非遗仪式呈现' },
+      { src: P('zhongjiu-05-guests.jpg'), caption: '嘉宾席与现场观众 · 万人级活动规模' },
+      { src: P('jingqu-01-wenboguan.jpg'), caption: '川酒文博馆 · 景观氛围改造后实景' },
+      { src: P('jingqu-02-gate.jpg'), caption: '金盆地集团大门 · 酒文化博览园标识与氛围' },
+      { src: P('jingqu-05-wine-garden.jpg'), caption: '「有朋四海家 · 种酒藏天下」种酒园区氛围改造' },
+      { src: P('jingqu-06-review.jpg'), caption: '3A 景区评审专家实地考察' },
     ],
   },
   {
@@ -100,67 +132,13 @@ const PROJECTS = [
     ],
   },
   {
-    year: '2016 — 2017',
-    tag: '大型活动',
-    cat: 'event',
-    title: '金盆地集团 · 原酒节（种酒节）',
-    desc: '连续两届万人级传统文化活动：非遗结合、5 天主题日策划、全场视觉与氛围物料设计。图为崇阳 130 周年庆典暨第四届种酒节与 2017 第五届种酒节。',
-    role: '活动主视觉与全场氛围物料设计、现场执行跟踪',
-    results: '连续两届大型传统文化活动视觉设计与现场执行落地（第四届 + 第五届种酒节）',
-    tone: 'amber',
-    gallery: [
-      { src: P('zhongjiu-01-drum.jpg'), caption: '2017 第五届金盆地种酒节 · 活动主视觉鼓面与红毯现场' },
-      { src: P('zhongjiu-02-stage-4th.jpg'), caption: '崇阳 130 周年庆典暨第四届种酒节主舞台（成都·崇州）' },
-      { src: P('zhongjiu-03-ceremony.jpg'), caption: '「休明盛世 · 开坛放酒」仪式环节' },
-      { src: P('zhongjiu-04-parade.jpg'), caption: '祭酒仪仗入场 · 传统非遗仪式呈现' },
-      { src: P('zhongjiu-05-guests.jpg'), caption: '嘉宾席与现场观众 · 万人级活动规模' },
-    ],
-  },
-  {
-    year: '2016.10 — 2017.01',
-    tag: '空间视觉',
-    cat: 'event',
-    title: '金盆地 · 创 3A 工业旅游景区',
-    desc: '川酒文博馆与酿酒基地景观氛围改造：景点介绍牌、酒文化视觉系统设计与落地，助力金盆地成功创建国家 3A 级工业旅游景区。',
-    role: '景区视觉系统与景观氛围设计、介绍牌与导视落地',
-    results: '助力金盆地成功创建国家 3A 级工业旅游景区',
-    tone: 'green',
-    gallery: [
-      { src: P('jingqu-01-wenboguan.jpg'), caption: '川酒文博馆 · 景观氛围改造后实景' },
-      { src: P('jingqu-02-gate.jpg'), caption: '金盆地集团大门 · 酒文化博览园标识与氛围' },
-      { src: P('jingqu-03-hall.jpg'), caption: '展馆内部陈列与参观动线' },
-      { src: P('jingqu-04-diorama.jpg'), caption: '川酒酿造工艺微缩场景展示' },
-      { src: P('jingqu-05-wine-garden.jpg'), caption: '「有朋四海家 · 种酒藏天下」种酒园区氛围改造' },
-      { src: P('jingqu-06-review.jpg'), caption: '3A 景区评审专家实地考察' },
-    ],
-  },
-  {
-    year: '2024 — 至今',
-    tag: '品牌视觉',
-    cat: 'brand',
-    title: '恋唯家定制家居 · 品牌内容矩阵',
-    desc: '系列板材花色电子画册与色卡设计（五金玻璃 / 爱格 / Branoo / 膜类等多个系列）、官网网页规划、小红书 / 抖音 / 视频号 / 公众号内容设计与拍摄剪辑。图为系列电子画册页面。',
-    role: '品牌内容设计与新媒体矩阵运营：画册、色卡、官网、短视频',
-    results: '4+ 系列电子画册 / 色卡上线，四大新媒体平台内容常态化运营',
-    tone: 'rose',
-    gallery: [
-      { src: P('lianweijia-00-cover.jpg'), caption: '恋唯家系列电子画册 · 系列铺排总览' },
-      { src: P('lianweijia-01.jpg'), caption: '《五金-玻璃系列产品画册》2026.07 · 封面与品牌视觉' },
-      { src: P('lianweijia-02.jpg'), caption: '《爱格系列电子色卡》· 设计理念版面' },
-      { src: P('lianweijia-03.jpg'), caption: '《五金-玻璃系列画册》· 玻璃产品展示页' },
-      { src: P('lianweijia-04.jpg'), caption: '《Branoo 系列电子色卡》· 应用场景页' },
-      { src: P('lianweijia-05.jpg'), caption: '《膜类系列电子色卡合集》· 色彩分组总览' },
-      { src: P('lianweijia-06.jpg'), caption: '《爱格系列电子色卡》· 爱格系列花色总览' },
-    ],
-  },
-  {
     year: '2023 — 2026',
-    tag: '传播海报',
+    tag: 'More Works · 海报',
     cat: 'print',
-    title: '医药品牌 · 传播海报精选',
-    desc: '洁尔阴、八味沉香散、人参首乌胶囊、唐王咽炎片等产品的备案海报、朋友圈海报、节气热点与招商海报设计，覆盖全年传播节点。',
+    title: 'More Works · 传播海报精选',
+    desc: '节气、节日、产品卖点、招商活动——海报按月排期、随热点上线，让品牌在经销商与客户的朋友圈里保持稳定的曝光节奏。跨行业的海报，用同一套方法：先找准卖点，再定画面，让每一张图都能被一眼读懂、一步记住。',
     role: '产品与节点海报创意设计：备案、招商、节气热点',
-    results: '20+ 张传播海报覆盖全年节点，服务多个医药产品线',
+    results: '20+ 张传播海报覆盖全年节点，服务多个产品线与传播场景',
     tone: 'coral',
     cover: 'haibao-00-cover.jpg',
     gallery: [
@@ -220,13 +198,17 @@ export default function Projects() {
               <DecryptedText text="贰 · WORKS" animateOn="view" speed={50} maxIterations={6} characters="!<>-_\/[]{}=+*^?#" />
             </p>
           }
-          en="SELECTED WORKS"
+          en="SELECTED PROJECTS"
           ghost="WORKS"
         >
           <AnimatedContent distance={40} blur={6} duration={0.8}>
-            <h2 className="section__title">精选项目</h2>
+            <h2 className="section__title">重点项目</h2>
           </AnimatedContent>
         </SectionHead>
+        <p className="ai__lead" style={{ marginBottom: '2.5rem' }}>
+          第一句话（品牌启动）→ 一米距离（展会执行）→ 看不见的信任（品牌视觉体系）——<br />
+          三个重点项目，一条主线：让品牌被看见、被信任。
+        </p>
 
         <div className="pfilter" role="tablist" aria-label="项目分类筛选">
           {CATS.map((c) => (

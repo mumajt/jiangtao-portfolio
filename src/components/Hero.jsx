@@ -45,7 +45,7 @@ export default function Hero() {
       <div className="hero__content container">
         <p className="hero__kicker reveal">
           <DecryptedText
-            text="以设计，让品牌被看见 · SINCE 2014"
+            text="12 YEARS · BRAND SIDE · 医药 / 家居 / 食品 / 酒业"
             animateOn="view"
             speed={55}
             maxIterations={6}
@@ -70,8 +70,9 @@ export default function Hero() {
           />
         </h1>
         <p className="hero__sub reveal reveal--d2">
-          企划设计师 · 12 年品牌设计与市场企划经验<br />
-          从品牌视觉到展会落地，设计 / 文案 / 拍摄一体化执行，善用 AI 工具让每一次传播都有据可依、有形可感。
+          企划设计师 · 12 年甲方品牌企划与平面设计经验，覆盖医药、家居、食品、酒业。<br />
+          擅长把产品卖点转化为清晰有力的画面语言，让业务员拿着物料就能高效推广——
+          每一页设计，都真实投产过。
         </p>
         <div className="hero__actions reveal reveal--d3">
           <a href="#projects" className="btn btn--solid">查看精选项目</a>
@@ -80,11 +81,11 @@ export default function Hero() {
       </div>
 
       <div className="hero__meta container reveal reveal--d4">
-        <span>线上线下活动视觉执行</span><i />
-        <span>展会参展执行</span><i />
-        <span>药品包装设计</span><i />
-        <span>新媒体内容</span><i />
-        <span>宣传画册</span>
+        <span>品牌视觉</span><i />
+        <span>展会执行</span><i />
+        <span>画册与电子色卡</span><i />
+        <span>药品包装</span><i />
+        <span>新媒体内容</span>
       </div>
 
       <div className="hero__scroll" aria-hidden="true">

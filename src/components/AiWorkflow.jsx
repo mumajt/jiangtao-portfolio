@@ -46,7 +46,7 @@ export default function AiWorkflow() {
             </SectionHead>
             <p className="ai__lead">
               AI 不替代设计判断，它放大执行效率。<br />
-              我把 AI 工具嵌进了从创意到发布的完整链路：
+              我把 AI 工具嵌进了从创意到发布的完整链路，支撑企业四端高频内容产出：
             </p>
           </div>
           <div className="ai__tools">
