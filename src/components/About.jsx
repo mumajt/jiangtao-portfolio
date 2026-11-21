@@ -7,7 +7,7 @@ import SectionHead from './SectionHead.jsx'
 
 const STATS = [
   { num: '12', suffix: '年+', label: '甲方企划设计经验' },
-  { num: '18', suffix: '册', label: '电子色卡与产品画册' },
+  { num: '8', suffix: '家', label: '服务企业 / 品牌' },
   { num: '10', suffix: '届+', label: '大型医药展会参展' },
   { num: '4', suffix: '端', label: '新媒体内容持续运营' },
 ]
