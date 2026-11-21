@@ -25,6 +25,12 @@ const CHAPTERS = [
     ],
     role: '主视觉延展设计 / 全部物料设计 / 印刷对接与落地跟踪',
     tone: 'violet',
+    summary: {
+      kicker: '项目一 · 小结',
+      title: '一个事业部 · 两个月 · 完整亮相',
+      en: 'From Zero to a Full Brand Debut',
+      desc: '从无到有建立品牌视觉体系：主视觉、启动大会物料、产品画册、中药健康手册、对折页、手提袋——全部由同一套视觉语言贯穿，并在全国启动大会如期落地；画册与手册成为后续各省区招商的标准配备。',
+    },
     gallery: [
       { src: P('gaofang-01.jpg'), caption: '全国启动大会 · LED 主视觉画面' },
       { src: P('gaofang-02.jpg'), caption: '《膏方系列画册》· 品牌历史版面设计' },
@@ -53,6 +59,27 @@ const CHAPTERS = [
     ],
     role: '视觉方案对接 / 邀请函·海报·展架设计 / 现场执行 / 会后传播',
     tone: 'teal',
+    phases: [
+      {
+        no: '前',
+        title: '参展前 · 物料设计准备',
+        en: 'Pre-show',
+        desc: '一场展会，十余项物料同时上线：邀请函、产品画册、易拉宝、伴手礼、参会服装——按物料清单逐项推进，提前两周完成打样确认与分箱贴标，物料到场零缺件。',
+      },
+      {
+        no: '中',
+        title: '参展中 · 展会现场',
+        en: 'At-show',
+        desc: '三天会期，物料在现场同时「说话」：产品展示、动线海报、产品展架、现场大屏——每一处都是品牌与客户的一米距离。',
+      },
+      {
+        no: '后',
+        title: '参展后 · 品牌宣传推广',
+        en: 'Post-show',
+        desc: '展会闭幕，传播才刚开始：当天发布展后回顾推文，新品、人气、获奖内容持续输出——把三天的现场热度，延成一个月的线上声量。',
+      },
+    ],
+    venues: ['第 84 届全国药品交易会 · 上海国家会展中心', '第 85 届全国药品交易会 · 上海国家会展中心', '双品汇 · 重庆', '星辰会 · 广州', '中国药品大会'],
     gallery: [
       { src: P('pharmchina-01-gate.jpg'), caption: '第 88 届全国药品交易会 · 2024 上海' },
       { src: P('pharmchina-02-booth-design.jpg'), caption: '展位设计方案效果图' },
@@ -81,18 +108,58 @@ const CHAPTERS = [
     ],
     role: '电子色卡体系与结构模板 / 嘉栩标志与 VI / 企业微信名片与小程序界面 / 四端内容视觉',
     tone: 'rose',
-    gallery: [
-      { src: P('lianweijia-00-cover.jpg'), caption: '系列电子画册 · 铺排总览' },
-      { src: P('lwj-seka01.jpg'), caption: '系列电子色卡 · 品牌定位与花色总览' },
-      { src: P('lwj-seka02.jpg'), caption: '电子色卡 · 花色全览（全部色号一页索引）' },
-      { src: P('lwj-seka03.jpg'), caption: '电子色卡内页 · 一页一色：饰面实拍、肌理文案与色号参数条' },
-      { src: P('lwj-seka04.jpg'), caption: '电子色卡内页 · 一页一色（另一花色）' },
-      { src: P('lianweijia-05.jpg'), caption: '《膜类系列电子色卡合集》· 色彩分组总览' },
-      { src: P('lwj-gxlogo.jpg'), caption: '嘉栩 GALLUX 品牌标志设计（本人设计）· VI 标准组合' },
-      { src: P('lwj-card.jpg'), caption: '企业微信名片 · 从界面到内容搭建，装进业务员的每张名片', portrait: true },
-      { src: P('lwj-mp.jpg'), caption: '恋唯家产品小程序 · 门店的板材墙装进客户手机', portrait: true },
-      { src: P('lwj-web.jpg'), caption: '恋唯家官网 · 客户线上认识品牌的第一触点', portrait: true },
-      { src: P('lwj-gzh.jpg'), caption: '公众号推文头图 · 一产品一推文，新品上市当天上线', portrait: true },
+    blocks: [
+      {
+        id: 'seka',
+        title: '色板系列画册 · 客户选色的第一工具',
+        en: 'Series Catalog',
+        copy: '15+ 产品系列画册：企业简介与品牌定位打底，基材与环保认证背书，花色全览一页索引全部色号；一页一色，饰面实拍、肌理文案、适配空间与色号参数条逐页排清。',
+        gallery: [
+          { src: P('lianweijia-00-cover.jpg'), caption: '系列电子画册 · 铺排总览' },
+          { src: P('lwj-seka01.jpg'), caption: '系列电子色卡 · 品牌定位与花色总览' },
+          { src: P('lwj-seka02.jpg'), caption: '电子色卡 · 花色全览（全部色号一页索引）' },
+          { src: P('lwj-seka03.jpg'), caption: '电子色卡内页 · 一页一色：饰面实拍、肌理文案与色号参数条' },
+          { src: P('lwj-seka04.jpg'), caption: '电子色卡内页 · 一页一色（另一花色）' },
+          { src: P('lianweijia-05.jpg'), caption: '《膜类系列电子色卡合集》· 色彩分组总览' },
+        ],
+      },
+      {
+        id: 'gallux',
+        title: '嘉栩 GALLUX · 标志设计及 VI 应用',
+        en: 'Brand Mark & VI',
+        copy: '图形化字标（G 视觉符号）+ 英文标志 GALLUX + 中文标志嘉栩：标准组合的大小、间距与相对位置固定，各元素必须以标准组合形式出现——标志溯源与全套应用规范由本人设计。',
+        gallery: [
+          { src: P('lwj-gxlogo.jpg'), caption: '嘉栩 GALLUX 品牌标志 · 标志标准组合与标志溯源（本人设计）' },
+        ],
+      },
+      {
+        id: 'card',
+        title: '一张名片，装下整个工厂线上门面',
+        en: 'WeChat Work Card · The Brand\'s Digital Front Door',
+        copy: '企业微信名片 & 微信小程序，从界面到内容搭建：品牌形象、产品系列（贝拉角 / Branoo / 萨维奥拉等）、工厂实力、典型案例与关键联系人，装进业务员随手的每一张名片。业务员谈单时发出去的不是一张卡片，而是品牌的线上门面——客户在手机上了解产品与工厂，信任就已经开始建立。',
+        gallery: [
+          { src: P('lwj-card.jpg'), caption: '企业微信名片小程序 · 整页界面与内容架构', portrait: true },
+        ],
+      },
+      {
+        id: 'mp',
+        title: '恋唯家 · 产品小程序',
+        en: 'Product WeChat Mini Program',
+        copy: '门店的板材墙，装进客户的手机里：板材与饰面、材料工艺、系统柜、案例分享四大类目——客户在手机上翻完花色与工艺，选材体验从门店延伸到指尖。',
+        gallery: [
+          { src: P('lwj-mp.jpg'), caption: '恋唯家产品小程序 · 四大类目界面', portrait: true },
+          { src: P('lwj-web.jpg'), caption: '恋唯家官网 · 客户线上认识品牌的第一触点', portrait: true },
+        ],
+      },
+      {
+        id: 'gzh',
+        title: '微信公众号 & 视频号 & 小红书 & 抖音',
+        en: 'Content Matrix',
+        copy: '业务员发画册靠手，发内容靠转发。两个品牌的内容矩阵按系列建库：每个产品系列一套头图语言、一篇卖点推文，新品上市当天同步上线——经销商转发朋友圈、业务员发给客户，随手就能拿走的品牌内容资产。',
+        gallery: [
+          { src: P('lwj-gzh.jpg'), caption: '公众号推文头图 · 一产品一推文，新品上市当天上线', portrait: true },
+        ],
+      },
     ],
   },
 ]
@@ -196,7 +263,7 @@ export default function Projects() {
         <SectionHead
           kicker={
             <p className="section__kicker">
-              贰 · WORKS
+              叁 · WORKS
             </p>
           }
           en="SELECTED PROJECTS"
@@ -244,25 +311,103 @@ export default function Projects() {
 
               <p className="chapter__role">[ 角色：{ch.role} ]</p>
 
-              <div className="chapter__gallery">
-                {ch.gallery.map((g, i) => (
-                  <AnimatedContent key={g.src} distance={24} blur={2} duration={0.5} delay={(i % 4) * 0.05} threshold={0.1}>
-                    <figure
-                      className={`gitem${i === 0 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
-                      onClick={() => open({ title: ch.title, tag: ch.kicker, year: ch.time, desc: ch.lead, role: ch.role, gallery: ch.gallery }, i)}
-                    >
-                      <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
-                        <img src={g.src} alt={g.caption} loading="lazy" />
-                        <span className="gitem__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              {/* 项目二：参展前 / 中 / 后 三阶段 */}
+              {ch.phases && (
+                <div className="chapter__phases">
+                  {ch.phases.map((ph, i) => (
+                    <AnimatedContent key={ph.no} className="ac-fill" distance={16} blur={2} duration={0.55} delay={i * 0.08} threshold={0.12}>
+                      <div className="phase">
+                        <div className="phase__glyph" aria-hidden="true">{ph.no}</div>
+                        <div className="phase__body">
+                          <p className="phase__en">{ph.en}</p>
+                          <h4>{ph.title}</h4>
+                          <p>{ph.desc}</p>
+                        </div>
                       </div>
-                      <figcaption>
-                        <em>{String(i + 1).padStart(2, '0')}</em>
-                        <span>{g.caption}</span>
-                      </figcaption>
-                    </figure>
+                    </AnimatedContent>
+                  ))}
+                </div>
+              )}
+
+              {/* 项目二：历届展会届次条 */}
+              {ch.venues && (
+                <AnimatedContent distance={10} blur={1} duration={0.5} threshold={0.2}>
+                  <div className="chapter__venues">
+                    <span className="venues__lbl">历届现场</span>
+                    {ch.venues.map((v) => <span className="venues__chip" key={v}>{v}</span>)}
+                  </div>
+                </AnimatedContent>
+              )}
+
+              {/* 图集：单组或分子版块 */}
+              {ch.gallery && (
+                <div className="chapter__gallery">
+                  {ch.gallery.map((g, i) => (
+                    <AnimatedContent key={g.src} distance={24} blur={2} duration={0.5} delay={(i % 4) * 0.05} threshold={0.1}>
+                      <figure
+                        className={`gitem${i === 0 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
+                        onClick={() => open({ title: ch.title, tag: ch.kicker, year: ch.time, desc: ch.lead, role: ch.role, gallery: ch.gallery }, i)}
+                      >
+                        <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
+                          <img src={g.src} alt={g.caption} loading="lazy" />
+                          <span className="gitem__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                        </div>
+                        <figcaption>
+                          <em>{String(i + 1).padStart(2, '0')}</em>
+                          <span>{g.caption}</span>
+                        </figcaption>
+                      </figure>
+                    </AnimatedContent>
+                  ))}
+                </div>
+              )}
+
+              {/* 项目三：分子版块展示（色卡 / 标志 / 名片 / 小程序 / 内容矩阵） */}
+              {ch.blocks && ch.blocks.map((blk) => (
+                <div className="chapter__block" key={blk.id} id={`${ch.id}-${blk.id}`}>
+                  <div className="block__head">
+                    <h4 className="block__title">{blk.title}</h4>
+                    <p className="block__en">{blk.en}</p>
+                  </div>
+                  <AnimatedContent distance={12} blur={1} duration={0.5} threshold={0.15}>
+                    <p className="block__copy">{blk.copy}</p>
                   </AnimatedContent>
-                ))}
-              </div>
+                  <div className="chapter__gallery chapter__gallery--block">
+                    {blk.gallery.map((g, i) => (
+                      <AnimatedContent key={g.src} distance={24} blur={2} duration={0.5} delay={(i % 4) * 0.05} threshold={0.1}>
+                        <figure
+                          className={`gitem${i === 0 && blk.gallery.length > 2 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
+                          onClick={() => open({ title: blk.title, tag: ch.kicker, year: ch.time, desc: blk.copy, role: ch.role, gallery: blk.gallery }, i)}
+                        >
+                          <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
+                            <img src={g.src} alt={g.caption} loading="lazy" />
+                            <span className="gitem__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                          </div>
+                          <figcaption>
+                            <em>{String(i + 1).padStart(2, '0')}</em>
+                            <span>{g.caption}</span>
+                          </figcaption>
+                        </figure>
+                      </AnimatedContent>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              {/* 项目一：小结 */}
+              {ch.summary && (
+                <AnimatedContent distance={16} blur={2} duration={0.55} threshold={0.15}>
+                  <div className="chapter__summary">
+                    <div className="summary__glyph" aria-hidden="true">结</div>
+                    <div className="summary__body">
+                      <p className="summary__kicker">{ch.summary.kicker}</p>
+                      <h4>{ch.summary.title}</h4>
+                      <p className="summary__en">{ch.summary.en}</p>
+                      <p className="summary__desc">{ch.summary.desc}</p>
+                    </div>
+                  </div>
+                </AnimatedContent>
+              )}
             </article>
           ))}
         </div>

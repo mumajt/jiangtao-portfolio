@@ -6,9 +6,14 @@ import SectionHead from './SectionHead.jsx'
 
 const STATS = [
   { num: '12', suffix: '年+', label: '甲方企划设计经验' },
-  { num: '8', suffix: '家', label: '服务企业 / 品牌' },
+  { num: '4', suffix: '行业', label: '医药 · 家居 · 食品 · 酒业' },
   { num: '10', suffix: '届+', label: '大型医药展会参展' },
-  { num: '4', suffix: '端', label: '新媒体内容持续运营' },
+  { num: '4', suffix: '端', label: '公众号 / 视频号 / 小红书 / 抖音' },
+]
+
+/* 专长（对齐作品集 ABOUT · SKILLS） */
+const SKILL_TAGS = [
+  '画册 / 包装', '展会全流程', '产品海报 / 节气海报', '新媒体视觉', '产品拍摄', '药品广告合规备案',
 ]
 
 const CAREER = [
@@ -108,6 +113,18 @@ export default function About() {
                   <div className="stat__label">{s.label}</div>
                 </div>
               ))}
+            </div>
+
+            <div className="about__skills">
+              <p className="sublabel">
+                <span className="sublabel__cn">专长</span>
+                <i className="sublabel__dot" />
+                <span className="sublabel__en">SKILLS</span>
+              </p>
+              <div className="about__skilltags">
+                {SKILL_TAGS.map((t) => <span key={t}>{t}</span>)}
+                <span className="about__skilltag--ai">AI 辅助：即梦 / 可画 / 剪映</span>
+              </div>
             </div>
           </div>
         </AnimatedContent>

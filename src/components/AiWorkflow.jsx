@@ -33,7 +33,7 @@ export default function AiWorkflow() {
             <SectionHead
               kicker={
                 <p className="section__kicker">
-                  肆 · AI WORKFLOW
+                  伍 · AI WORKFLOW
                 </p>
               }
               en="AI WORKFLOW"

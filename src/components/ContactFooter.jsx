@@ -13,7 +13,7 @@ export default function ContactFooter() {
       <div className="contact__inner container">
         <span className="shead__ghost" aria-hidden="true">CONTACT</span>
         <p className="contact__kicker">
-          伍 · CONTACT
+          陆 · CONTACT
         </p>
         <h2 className="contact__title">
           <BlurText text="让下一个项目" animateBy="letters" delay={150} blur={10} distance={12} />

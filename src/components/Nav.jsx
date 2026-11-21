@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 const LINKS = [
   { href: '#about', label: '关于我' },
+  { href: '#philosophy', label: '设计观' },
   { href: '#projects', label: '精选项目' },
   { href: '#strengths', label: '个人优势' },
   { href: '#ai', label: 'AI 工作流' },

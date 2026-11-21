@@ -55,7 +55,7 @@ export default function Strengths() {
         <SectionHead
           kicker={
             <p className="section__kicker">
-              叁 · STRENGTHS
+              肆 · STRENGTHS
             </p>
           }
           en="CORE STRENGTHS"

@@ -1,6 +1,7 @@
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
+import Philosophy from './components/Philosophy.jsx'
 import Projects from './components/Projects.jsx'
 import Strengths from './components/Strengths.jsx'
 import AiWorkflow from './components/AiWorkflow.jsx'
@@ -13,6 +14,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Philosophy />
         <Projects />
         <Strengths />
         <AiWorkflow />
