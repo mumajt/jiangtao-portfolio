@@ -146,7 +146,7 @@ const CHAPTERS = [
         en: 'WeChat Work Card · The Brand\'s Digital Front Door',
         copy: '企业微信名片 & 微信小程序，从界面到内容搭建：品牌形象、产品系列（贝拉角 / Branoo / 萨维奥拉等）、工厂实力、典型案例与关键联系人，装进业务员随手的每一张名片。业务员谈单时发出去的不是一张卡片，而是品牌的线上门面——客户在手机上了解产品与工厂，信任就已经开始建立。',
         gallery: [
-          { src: P('lwj-card.jpg'), caption: '企业微信名片小程序 · 整页界面与内容架构', portrait: true },
+          { src: P('lwj-card-sections.jpg'), caption: '企业微信名片小程序 · 界面分区展示：品牌形象与公司概貌 / 产品与服务 / 工厂 · 案例 · 合作品牌' },
         ],
       },
       {
@@ -166,7 +166,7 @@ const CHAPTERS = [
         copy: '业务员发画册靠手，发内容靠转发。两个品牌的内容矩阵按系列建库：每个产品系列一套头图语言、一篇卖点推文，新品上市当天同步上线——经销商转发朋友圈、业务员发给客户，随手就能拿走的品牌内容资产。',
         gallery: [
           { src: P('lwj-gzh.jpg'), caption: '公众号推文 · 头图与图文排版', portrait: true },
-          { src: P('lwj-gzhhd.jpg'), caption: '公众号推文 · 企业简介长图文', portrait: true },
+          { src: P('lwj-gzhhd-sections.jpg'), caption: '公众号推文 · 企业简介长图文（分段展示）' },
         ],
       },
     ],
@@ -214,7 +214,8 @@ const MORE = [
     tag: '品牌 VI · 2016 — 2017',
     desc: 'Logo 与标准字规范、辅助图形系统、办公应用与导视系统，贯穿品牌基础与应用两大体系。',
     tone: 'wine',
-    cover: 'vi-00-cover.jpg',
+    cover: 'vi-01-logo.jpg',
+    coverPos: 'center 42%',
     gallery: [
       { src: P('vi-01-logo.jpg'), caption: '品牌基础 · Logo 与设计说明' },
       { src: P('vi-02-biaozhunzi.jpg'), caption: '品牌基础 · 标准字规范' },
@@ -231,7 +232,8 @@ const MORE = [
     tag: '跨行业海报 · 2023 — 2026',
     desc: '节气、节日、产品卖点、招商活动——先找准卖点，再定画面，让每一张图都能被一眼读懂、一步记住。',
     tone: 'coral',
-    cover: 'haibao-00-cover.jpg',
+    cover: 'haibao-07-lixia.jpg',
+    coverPos: 'center 28%',
     gallery: [
       { src: P('hb-qinglv.jpg'), caption: '植此青绿 · 春日主题产品海报（AI 辅助创作）', portrait: true },
       { src: P('hb-shuangjiang.jpg'), caption: '霜降 · 节气 × 熟地黄丸产品海报（AI 辅助创作）', portrait: true },
@@ -388,7 +390,7 @@ export default function Projects() {
                       {blk.gallery.map((g, i) => (
                         <AnimatedContent key={g.src} distance={20} blur={2} duration={0.5} threshold={0.12}>
                           <figure
-                            className="gitem gitem--fit"
+                            className={`gitem${g.portrait ? ' gitem--fit' : ''}`}
                             onClick={() => open({ title: blk.title, tag: ch.kicker, year: ch.time, desc: blk.copy, role: ch.role, gallery: blk.gallery }, i)}
                           >
                             <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
@@ -462,7 +464,7 @@ export default function Projects() {
               <AnimatedContent key={m.title} className="ac-fill" distance={16} blur={2} duration={0.5} delay={(i % 2) * 0.08} threshold={0.12}>
                 <article className="mcard" onClick={() => open({ title: m.title, tag: m.tag, desc: m.desc, gallery: m.gallery })} tabIndex={0} role="button" onKeyDown={(e) => { if (e.key === 'Enter') open({ title: m.title, tag: m.tag, desc: m.desc, gallery: m.gallery }) }}>
                   <div className="mcard__media" style={{ background: TONES[m.tone] }}>
-                    <img src={P(m.cover)} alt={m.title} loading="lazy" />
+                    <img src={P(m.cover)} alt={m.title} loading="lazy" style={m.coverPos ? { objectPosition: m.coverPos } : undefined} />
                     <span className="mcard__view">图集 · {m.gallery.length} 张</span>
                   </div>
                   <div className="mcard__body">

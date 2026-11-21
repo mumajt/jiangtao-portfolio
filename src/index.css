@@ -1941,8 +1941,9 @@ body::after {
 
 .mcard__media {
   position: relative;
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
+  border-bottom: 1px solid var(--line);
 }
 
 .mcard__media img {
@@ -2334,7 +2335,7 @@ body::after {
   display: grid;
   grid-template-columns: 5fr 7fr;
   gap: 10px 40px;
-  align-items: start;
+  align-items: center;
 }
 
 .block__split .block__copy {
