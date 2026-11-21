@@ -2317,3 +2317,36 @@ body::after {
   .chapter__summary { flex-direction: column; padding: 24px 20px; }
   .block__head { flex-direction: column; gap: 4px; }
 }
+
+/* ================= 图集补充：整行横幅条 + 单图分栏 ================= */
+
+/* 超宽横幅（如启动大会横幅）：整行展示，保持原比例 */
+.gitem--wide {
+  grid-column: 1 / -1;
+}
+
+.gitem--wide .gitem__media {
+  aspect-ratio: 3.6 / 1;
+}
+
+/* 单图版块：左文右图分栏 */
+.block__split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 10px 40px;
+  align-items: start;
+}
+
+.block__split .block__copy {
+  margin-bottom: 0;
+  font-size: 14.5px;
+}
+
+.block__split .gitem__media {
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 860px) {
+  .block__split { grid-template-columns: 1fr; }
+  .gitem--wide .gitem__media { aspect-ratio: 3 / 1; }
+}

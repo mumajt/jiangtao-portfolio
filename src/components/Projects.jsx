@@ -32,14 +32,16 @@ const CHAPTERS = [
       desc: '从无到有建立品牌视觉体系：主视觉、启动大会物料、产品画册、中药健康手册、对折页、手提袋——全部由同一套视觉语言贯穿，并在全国启动大会如期落地；画册与手册成为后续各省区招商的标准配备。',
     },
     gallery: [
-      { src: P('gaofang-01.jpg'), caption: '全国启动大会 · LED 主视觉画面' },
+      { src: P('gf-led.jpg'), caption: '全国启动大会 · LED 主视觉画面（主视觉延展设计）' },
+      { src: P('gf-banner.jpg'), caption: '启动大会 · 现场横幅', wide: true },
+      { src: P('gf-standee.jpg'), caption: '启动大会 · 门型展架系列' },
+      { src: P('gf-invite1.jpg'), caption: '启动大会 · 圆桌会邀请函（外页）' },
+      { src: P('gf-invite2.jpg'), caption: '启动大会 · 圆桌会邀请函（内页）' },
+      { src: P('gf-mat.jpg'), caption: '启动大会 · 会议桌垫（膏方产品系列陈列）' },
+      { src: P('gf-namecard.jpg'), caption: '启动大会 · 名片模板' },
+      { src: P('gf-mockup.jpg'), caption: '《膏方系列画册》· 印刷成品样机', portrait: true },
       { src: P('gaofang-02.jpg'), caption: '《膏方系列画册》· 品牌历史版面设计' },
       { src: P('gaofang-03.jpg'), caption: '《华北制药中药健康手册》封面设计' },
-      { src: P('gaofang-04.jpg'), caption: '九珍玉妍膏 · 产品海报（红金系列）' },
-      { src: P('gaofang-08.jpg'), caption: '九珍玉妍膏 · 产品优势海报' },
-      { src: P('gaofang-06.jpg'), caption: '龙行养古膏 · 中药知识科普长图' },
-      { src: P('gaofang-09.jpg'), caption: '气血不足自测表 · 女性健康科普海报' },
-      { src: P('gaofang-10.jpg'), caption: '门型展架 · 系列终端物料组合（产品 × 企业 × 膏方知识）' },
     ],
   },
   {
@@ -81,14 +83,17 @@ const CHAPTERS = [
     ],
     venues: ['第 84 届全国药品交易会 · 上海国家会展中心', '第 85 届全国药品交易会 · 上海国家会展中心', '双品汇 · 重庆', '星辰会 · 广州', '中国药品大会'],
     gallery: [
+      { src: P('ex-booth-gy.jpg'), caption: '济世药业 · 全国药品交易会展位设计方案（葫芦造型主装置）' },
       { src: P('pharmchina-01-gate.jpg'), caption: '第 88 届全国药品交易会 · 2024 上海' },
-      { src: P('pharmchina-02-booth-design.jpg'), caption: '展位设计方案效果图' },
       { src: P('pharmchina-03-crowd.jpg'), caption: '展位现场 · 产品陈列与洽谈区' },
-      { src: P('pharmchina-04-visitors.jpg'), caption: '现场观众翻阅产品画册' },
+      { src: P('ex-booth-sph.jpg'), caption: '双品汇 · 展位视觉方案' },
+      { src: P('ex-booth-xch.jpg'), caption: '星辰会 · 展位视觉方案（CCTV 展台）' },
+      { src: P('ex-site-czdh.jpg'), caption: '成长大会 · 展会现场' },
       { src: P('shuangpinhui-01-gala.jpg'), caption: '第 9 届双品汇欢迎晚宴 · 产品荣登主舞台大屏（重庆）' },
-      { src: P('shuangpinhui-02-booth-design.jpg'), caption: '双品汇展位设计方案效果图' },
-      { src: P('shuangpinhui-03-booth-site.jpg'), caption: '济世药业展位现场 · 品牌形象与产品展示' },
-      { src: P('shuangpinhui-04-negotiation.jpg'), caption: '展位洽谈区 · 客商咨询对接' },
+      { src: P('pharmchina-04-visitors.jpg'), caption: '现场观众翻阅产品画册' },
+      { src: P('ex-pop.jpg'), caption: '参展物料 · 终端 POP 海报', portrait: true },
+      { src: P('ex-bag.jpg'), caption: '参展物料 · 产品手提袋' },
+      { src: P('ex-burst.jpg'), caption: '参展物料 · 浓缩丸爆炸贴' },
     ],
   },
   {
@@ -115,6 +120,7 @@ const CHAPTERS = [
         en: 'Series Catalog',
         copy: '15+ 产品系列画册：企业简介与品牌定位打底，基材与环保认证背书，花色全览一页索引全部色号；一页一色，饰面实拍、肌理文案、适配空间与色号参数条逐页排清。',
         gallery: [
+          { src: P('lwj-gymockup.jpg'), caption: '《恋唯家工艺》产品画册 · 印刷成品样机' },
           { src: P('lianweijia-00-cover.jpg'), caption: '系列电子画册 · 铺排总览' },
           { src: P('lwj-seka01.jpg'), caption: '系列电子色卡 · 品牌定位与花色总览' },
           { src: P('lwj-seka02.jpg'), caption: '电子色卡 · 花色全览（全部色号一页索引）' },
@@ -125,15 +131,17 @@ const CHAPTERS = [
       },
       {
         id: 'gallux',
+        split: true,
         title: '嘉栩 GALLUX · 标志设计及 VI 应用',
         en: 'Brand Mark & VI',
         copy: '图形化字标（G 视觉符号）+ 英文标志 GALLUX + 中文标志嘉栩：标准组合的大小、间距与相对位置固定，各元素必须以标准组合形式出现——标志溯源与全套应用规范由本人设计。',
         gallery: [
-          { src: P('lwj-gxlogo.jpg'), caption: '嘉栩 GALLUX 品牌标志 · 标志标准组合与标志溯源（本人设计）' },
+          { src: P('lwj-gxmockup.jpg'), caption: '嘉栩 GALLUX 标志 · 印刷应用样机（本人设计）' },
         ],
       },
       {
         id: 'card',
+        split: true,
         title: '一张名片，装下整个工厂线上门面',
         en: 'WeChat Work Card · The Brand\'s Digital Front Door',
         copy: '企业微信名片 & 微信小程序，从界面到内容搭建：品牌形象、产品系列（贝拉角 / Branoo / 萨维奥拉等）、工厂实力、典型案例与关键联系人，装进业务员随手的每一张名片。业务员谈单时发出去的不是一张卡片，而是品牌的线上门面——客户在手机上了解产品与工厂，信任就已经开始建立。',
@@ -147,8 +155,8 @@ const CHAPTERS = [
         en: 'Product WeChat Mini Program',
         copy: '门店的板材墙，装进客户的手机里：板材与饰面、材料工艺、系统柜、案例分享四大类目——客户在手机上翻完花色与工艺，选材体验从门店延伸到指尖。',
         gallery: [
-          { src: P('lwj-mp.jpg'), caption: '恋唯家产品小程序 · 四大类目界面', portrait: true },
-          { src: P('lwj-web.jpg'), caption: '恋唯家官网 · 客户线上认识品牌的第一触点', portrait: true },
+          { src: P('lwj-mpmockup.jpg'), caption: '恋唯家产品小程序 · 多机型真机样机' },
+          { src: P('lwj-webmockup.jpg'), caption: '恋唯家官网 × 小程序 · 电脑端与手机端适配样机' },
         ],
       },
       {
@@ -157,7 +165,8 @@ const CHAPTERS = [
         en: 'Content Matrix',
         copy: '业务员发画册靠手，发内容靠转发。两个品牌的内容矩阵按系列建库：每个产品系列一套头图语言、一篇卖点推文，新品上市当天同步上线——经销商转发朋友圈、业务员发给客户，随手就能拿走的品牌内容资产。',
         gallery: [
-          { src: P('lwj-gzh.jpg'), caption: '公众号推文头图 · 一产品一推文，新品上市当天上线', portrait: true },
+          { src: P('lwj-gzh.jpg'), caption: '公众号推文 · 头图与图文排版', portrait: true },
+          { src: P('lwj-gzhhd.jpg'), caption: '公众号推文 · 企业简介长图文', portrait: true },
         ],
       },
     ],
@@ -175,10 +184,11 @@ const MORE = [
     gallery: [
       { src: P('baozhuang-01-shihuang.jpg'), caption: '石黄抗菌胶囊 · 产品主视觉与包装设计' },
       { src: P('baozhuang-02-niuhuang.jpg'), caption: '牛黄解毒片 · 包装立体效果图' },
-      { src: P('baozhuang-03-jiuwuzui.jpg'), caption: '酒无罪 · 山楂丹参乌梅椎骨产品包装' },
-      { src: P('baozhuang-04-shanzhawan.jpg'), caption: '大山楂丸袋装 · 包装效果图' },
-      { src: P('baozhuang-05-shihuang-flat.jpg'), caption: '石黄抗菌胶囊 · 包装平面展开图' },
-      { src: P('baozhuang-06-sanhuang.jpg'), caption: '三黄片（山东）· 包装平面设计' },
+      { src: P('pk-lajiao.jpg'), caption: '辣椒风湿凝胶 · 广审备案海报', portrait: true },
+      { src: P('pk-lin.jpg'), caption: '芩桂咳喘宁胶囊 · 产品推广海报' },
+      { src: P('pk-pop.jpg'), caption: '藿香正气丸 · 终端手绘 POP', portrait: true },
+      { src: P('tm-1.jpg'), caption: '终端陈列 · 济世药业品牌柜（门店落地实拍）', portrait: true },
+      { src: P('tm-2.jpg'), caption: '终端陈列 · 产品柜台落地实拍', portrait: true },
     ],
   },
   {
@@ -223,14 +233,14 @@ const MORE = [
     tone: 'coral',
     cover: 'haibao-00-cover.jpg',
     gallery: [
+      { src: P('hb-qinglv.jpg'), caption: '植此青绿 · 春日主题产品海报（AI 辅助创作）', portrait: true },
+      { src: P('hb-shuangjiang.jpg'), caption: '霜降 · 节气 × 熟地黄丸产品海报（AI 辅助创作）', portrait: true },
+      { src: P('hb-qiuxi.jpg'), caption: '秋夕 · 节气 × 产品海报（AI 辅助创作）', portrait: true },
+      { src: P('hb-yaoming.jpg'), caption: '悦明目 · 产品推广海报（实拍 × 版式）', portrait: true },
       { src: P('haibao-01-jieeryin.jpg'), caption: '洁尔阴软膏 · 产品备案海报（2026）' },
-      { src: P('haibao-02-laodongjie.jpg'), caption: '洁尔阴软膏 · 劳动节朋友圈海报（2026）' },
       { src: P('haibao-03-chenxiangsan.jpg'), caption: '八味沉香散 · 朋友圈推广海报（2026）' },
       { src: P('haibao-04-shenwu.jpg'), caption: '人参首乌胶囊 · 参乌合璧产品海报（2025）' },
-      { src: P('haibao-05-tangwang.jpg'), caption: '唐王咽炎片二代 · 招商海报（2024）' },
-      { src: P('haibao-06-huoxiang.jpg'), caption: '藿香正气丸 · 暑湿感冒推广海报（2023）' },
       { src: P('haibao-07-lixia.jpg'), caption: '立夏节气 · 品牌节气海报（2023）' },
-      { src: P('haibao-08-xieshien.jpg'), caption: '谢师恩 · 教师节活动海报（2023）' },
     ],
   },
 ]
@@ -345,7 +355,7 @@ export default function Projects() {
                   {ch.gallery.map((g, i) => (
                     <AnimatedContent key={g.src} distance={24} blur={2} duration={0.5} delay={(i % 4) * 0.05} threshold={0.1}>
                       <figure
-                        className={`gitem${i === 0 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
+                        className={`gitem${i === 0 ? ' gitem--lead' : ''}${g.wide ? ' gitem--wide' : ''}${g.portrait ? ' gitem--fit' : ''}`}
                         onClick={() => open({ title: ch.title, tag: ch.kicker, year: ch.time, desc: ch.lead, role: ch.role, gallery: ch.gallery }, i)}
                       >
                         <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
@@ -369,28 +379,56 @@ export default function Projects() {
                     <h4 className="block__title">{blk.title}</h4>
                     <p className="block__en">{blk.en}</p>
                   </div>
-                  <AnimatedContent distance={12} blur={1} duration={0.5} threshold={0.15}>
-                    <p className="block__copy">{blk.copy}</p>
-                  </AnimatedContent>
-                  <div className="chapter__gallery chapter__gallery--block">
-                    {blk.gallery.map((g, i) => (
-                      <AnimatedContent key={g.src} distance={24} blur={2} duration={0.5} delay={(i % 4) * 0.05} threshold={0.1}>
-                        <figure
-                          className={`gitem${i === 0 && blk.gallery.length > 2 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
-                          onClick={() => open({ title: blk.title, tag: ch.kicker, year: ch.time, desc: blk.copy, role: ch.role, gallery: blk.gallery }, i)}
-                        >
-                          <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
-                            <img src={g.src} alt={g.caption} loading="lazy" />
-                            <span className="gitem__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-                          </div>
-                          <figcaption>
-                            <em>{String(i + 1).padStart(2, '0')}</em>
-                            <span>{g.caption}</span>
-                          </figcaption>
-                        </figure>
+                  {blk.split ? (
+                    /* 单图版块：左文右图分栏 */
+                    <div className="block__split">
+                      <AnimatedContent distance={12} blur={1} duration={0.5} threshold={0.15}>
+                        <p className="block__copy">{blk.copy}</p>
                       </AnimatedContent>
-                    ))}
-                  </div>
+                      {blk.gallery.map((g, i) => (
+                        <AnimatedContent key={g.src} distance={20} blur={2} duration={0.5} threshold={0.12}>
+                          <figure
+                            className="gitem gitem--fit"
+                            onClick={() => open({ title: blk.title, tag: ch.kicker, year: ch.time, desc: blk.copy, role: ch.role, gallery: blk.gallery }, i)}
+                          >
+                            <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
+                              <img src={g.src} alt={g.caption} loading="lazy" />
+                              <span className="gitem__idx" aria-hidden="true">01</span>
+                            </div>
+                            <figcaption>
+                              <em>01</em>
+                              <span>{g.caption}</span>
+                            </figcaption>
+                          </figure>
+                        </AnimatedContent>
+                      ))}
+                    </div>
+                  ) : (
+                    <>
+                      <AnimatedContent distance={12} blur={1} duration={0.5} threshold={0.15}>
+                        <p className="block__copy">{blk.copy}</p>
+                      </AnimatedContent>
+                      <div className="chapter__gallery chapter__gallery--block">
+                        {blk.gallery.map((g, i) => (
+                          <AnimatedContent key={g.src} distance={24} blur={2} duration={0.5} delay={(i % 4) * 0.05} threshold={0.1}>
+                            <figure
+                              className={`gitem${i === 0 && blk.gallery.length > 2 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
+                              onClick={() => open({ title: blk.title, tag: ch.kicker, year: ch.time, desc: blk.copy, role: ch.role, gallery: blk.gallery }, i)}
+                            >
+                              <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
+                                <img src={g.src} alt={g.caption} loading="lazy" />
+                                <span className="gitem__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                              </div>
+                              <figcaption>
+                                <em>{String(i + 1).padStart(2, '0')}</em>
+                                <span>{g.caption}</span>
+                              </figcaption>
+                            </figure>
+                          </AnimatedContent>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
               ))}
 
