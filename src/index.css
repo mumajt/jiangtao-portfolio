@@ -1826,6 +1826,20 @@ body::after {
   grid-column: span 3;
   cursor: pointer;
   min-width: 0;
+  /* 画廊装裱：白卡纸框 + 极淡阴影 */
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 10px 6px;
+  box-shadow: 0 1px 2px rgba(28, 27, 24, 0.04);
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 0.55s ease, border-color 0.55s ease;
+}
+
+.gitem:hover {
+  transform: translateY(-5px);
+  border-color: var(--line-strong);
+  box-shadow: 0 18px 36px -14px rgba(28, 27, 24, 0.18);
 }
 
 /* 首图通栏：作品集 case-study 式 hero */
@@ -1833,9 +1847,8 @@ body::after {
 
 .gitem__media {
   position: relative;
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
-  border: 1px solid var(--line);
   aspect-ratio: 4 / 3;
   background: var(--panel);
 }
@@ -1847,18 +1860,15 @@ body::after {
   object-fit: cover;
   display: block;
   transform: scale(1.001);
-  filter: saturate(0.94);
-  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.6s ease;
+  /* 画廊式：默认微降饱和，hover 还原全彩 */
+  filter: saturate(0.82) contrast(0.97);
+  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.7s ease;
   will-change: transform;
-}
-
-.gitem:hover .gitem__media {
-  border-color: var(--line-strong);
 }
 
 .gitem:hover .gitem__media img {
   transform: scale(1.045);
-  filter: saturate(1.03);
+  filter: saturate(1.05) contrast(1);
 }
 
 /* hover 浮现的序号角标 */
@@ -1884,18 +1894,18 @@ body::after {
   transform: translateY(0);
 }
 
-/* 元数据式图注：编号 + 小字 */
+/* 元数据式图注：编号 + 延伸细线 + 小字（画廊标签） */
 .gitem figcaption {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  padding: 12px 2px 0;
+  padding: 12px 6px 8px;
 }
 
 .gitem figcaption em {
   font-family: var(--font-en);
-  font-style: normal;
-  font-size: 11px;
+  font-style: italic;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: var(--accent);
   flex-shrink: 0;
@@ -1908,12 +1918,40 @@ body::after {
   transition: color 0.4s ease;
 }
 
-.gitem:hover figcaption span { color: var(--text-dim); }
+.gitem figcaption span::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  margin-top: 6px;
+  background: var(--line-strong);
+  transition: width 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
 
-/* 竖版截图：完整显示不裁切，垫在同色系底上 */
+.gitem:hover figcaption span { color: var(--text-dim); }
+.gitem:hover figcaption span::after { width: 46px; }
+
+/* 竖版截图：完整显示不裁切，白卡纸正好作衬 */
 .gitem--fit .gitem__media img {
   object-fit: contain;
   padding: 14px;
+}
+
+/* 编辑式错落：每行第 1、3 张下沉，形成画廊墙节奏 */
+.chapter__gallery > *:nth-child(4n + 2),
+.chapter__gallery > *:nth-child(4n) {
+  margin-top: 30px;
+}
+
+.chapter__gallery--block > *:nth-child(4n + 2),
+.chapter__gallery--block > *:nth-child(4n) {
+  margin-top: 0;
+}
+
+/* 通栏元素不参与错落 */
+.chapter__gallery > *:has(.gitem--wide),
+.chapter__gallery > *:has(.gitem--lead) {
+  margin-top: 0;
 }
 
 /* ---------- More Works ---------- */
@@ -1926,17 +1964,20 @@ body::after {
 }
 
 .mcard {
-  background: var(--panel);
+  background: #fffdf8;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: border-color 0.45s ease, background 0.45s ease;
+  box-shadow: 0 1px 2px rgba(28, 27, 24, 0.04);
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 0.55s ease, border-color 0.55s ease;
 }
 
 .mcard:hover {
+  transform: translateY(-5px);
   border-color: var(--line-strong);
-  background: #f1ede3;
+  box-shadow: 0 18px 36px -14px rgba(28, 27, 24, 0.18);
 }
 
 .mcard__media {
@@ -1951,14 +1992,14 @@ body::after {
   object-fit: cover;
   display: block;
   transform: scale(1.001);
-  filter: saturate(0.94);
-  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.6s ease;
+  filter: saturate(0.82) contrast(0.97);
+  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.7s ease;
   will-change: transform;
 }
 
 .mcard:hover .mcard__media img {
   transform: scale(1.05);
-  filter: saturate(1.03);
+  filter: saturate(1.05) contrast(1);
 }
 
 .mcard__view {
@@ -1995,6 +2036,8 @@ body::after {
 /* ---------- 响应式 ---------- */
 @media (max-width: 1100px) {
   .gitem, .gitem--fit { grid-column: span 4; }
+  .chapter__gallery > *:nth-child(4n + 2),
+  .chapter__gallery > *:nth-child(4n) { margin-top: 0; }
 }
 
 @media (max-width: 860px) {
@@ -2015,6 +2058,7 @@ body::after {
   .gitem, .gitem--fit { grid-column: span 12; }
   .gitem__media { aspect-ratio: 3 / 2; }
   .gitem--fit .gitem__media { aspect-ratio: 3 / 2; }
+  .gitem { padding: 8px 8px 4px; }
   .chapter__lead { font-size: 14px; }
   .chapter__gallery { gap: 22px 18px; }
 }
