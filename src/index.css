@@ -1873,15 +1873,12 @@ body::after {
   object-fit: cover;
   display: block;
   transform: scale(1.001);
-  /* 画廊式：默认微降饱和，hover 还原全彩 */
-  filter: saturate(0.82) contrast(0.97);
   transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.7s ease;
-  will-change: transform;
 }
 
 .gitem:hover .gitem__media img {
   transform: scale(1.045);
-  filter: saturate(1.05) contrast(1);
+  filter: saturate(1.06);
 }
 
 /* hover 浮现的序号角标 */
@@ -1892,8 +1889,7 @@ body::after {
   font-size: 11px;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.85);
-  background: rgba(10, 12, 16, 0.55);
-  backdrop-filter: blur(6px);
+  background: rgba(10, 12, 16, 0.72);
   padding: 4px 10px;
   border-radius: 99px;
   opacity: 0;
@@ -2005,14 +2001,12 @@ body::after {
   object-fit: cover;
   display: block;
   transform: scale(1.001);
-  filter: saturate(0.82) contrast(0.97);
   transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.7s ease;
-  will-change: transform;
 }
 
 .mcard:hover .mcard__media img {
   transform: scale(1.05);
-  filter: saturate(1.05) contrast(1);
+  filter: saturate(1.06);
 }
 
 .mcard__view {
@@ -2021,9 +2015,8 @@ body::after {
   font-size: 12px;
   padding: 6px 12px;
   border-radius: 99px;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.62);
   color: #fff;
-  backdrop-filter: blur(6px);
 }
 
 .mcard__body { padding: 24px 26px 28px; }
