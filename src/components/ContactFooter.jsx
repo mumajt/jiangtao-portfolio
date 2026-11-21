@@ -16,8 +16,8 @@ export default function ContactFooter() {
           伍 · CONTACT
         </p>
         <h2 className="contact__title">
-          <BlurText text="让下一个项目" animateBy="letters" delay={150} blur={10} distance={30} />
-          <BlurText text="被更多人看见。" className="grad" animateBy="letters" delay={420} blur={10} distance={30} />
+          <BlurText text="让下一个项目" animateBy="letters" delay={150} blur={10} distance={12} />
+          <BlurText text="被更多人看见。" className="grad" animateBy="letters" delay={420} blur={10} distance={12} />
         </h2>
         <p className="contact__sub">
           求职意向：企划设计 / 品牌企划 · 成都<br />
@@ -26,7 +26,7 @@ export default function ContactFooter() {
 
         <div className="contact__list">
           {CONTACTS.map((c, i) => (
-            <AnimatedContent key={c.label} className="ac-fill" distance={36} blur={3} duration={0.8} delay={i * 0.1} threshold={0.2}>
+            <AnimatedContent key={c.label} className="ac-fill" distance={14} blur={1} duration={0.5} delay={i * 0.1} threshold={0.2}>
               <a
                 className="contact__item"
                 href={c.href || undefined}
@@ -38,7 +38,7 @@ export default function ContactFooter() {
               </a>
             </AnimatedContent>
           ))}
-          <AnimatedContent className="ac-fill" distance={36} blur={3} duration={0.8} delay={0.3} threshold={0.2}>
+          <AnimatedContent className="ac-fill" distance={14} blur={1} duration={0.5} delay={0.3} threshold={0.2}>
             <div className="contact__item contact__item--qr">
               <span className="contact__label">WECHAT QR</span>
               <img className="contact__qr" src="wechat-qr.png" alt="微信二维码 · 扫码加好友" />

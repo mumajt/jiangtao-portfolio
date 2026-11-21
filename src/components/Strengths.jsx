@@ -61,14 +61,14 @@ export default function Strengths() {
           en="CORE STRENGTHS"
           ghost="SKILLS"
         >
-          <AnimatedContent distance={40} blur={6} duration={0.8}>
+          <AnimatedContent distance={16} blur={2} duration={0.5}>
             <h2 className="section__title">个人优势</h2>
           </AnimatedContent>
         </SectionHead>
 
         <div className="strengths__grid">
           {STRENGTHS.map((s, i) => (
-            <AnimatedContent key={s.no} className="ac-fill" distance={48} blur={4} duration={0.85} delay={(i % 3) * 0.09} threshold={0.15}>
+            <AnimatedContent key={s.no} className="ac-fill" distance={18} blur={2} duration={0.5} delay={(i % 3) * 0.09} threshold={0.15}>
               <BorderGlow
                 className="glow-card"
                 backgroundColor="#fbf9f4"
@@ -101,7 +101,7 @@ export default function Strengths() {
           </p>
           <div className="skills__grid">
             {SKILLS.map((sk, i) => (
-              <AnimatedContent key={sk.name} distance={24} blur={2} duration={0.8} delay={i * 0.06} threshold={0.2}>
+              <AnimatedContent key={sk.name} distance={24} blur={2} duration={0.5} delay={i * 0.06} threshold={0.2}>
                 <div className="skills__row">
                   <span className="skills__name">{sk.name}</span>
                   <div className="skills__track">

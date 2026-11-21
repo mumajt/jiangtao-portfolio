@@ -202,7 +202,7 @@ export default function Projects() {
           en="SELECTED PROJECTS"
           ghost="WORKS"
         >
-          <AnimatedContent distance={40} blur={6} duration={0.8}>
+          <AnimatedContent distance={16} blur={2} duration={0.5}>
             <h2 className="section__title">重点项目</h2>
           </AnimatedContent>
         </SectionHead>
@@ -227,11 +227,11 @@ export default function Projects() {
                 </div>
               </div>
 
-              <AnimatedContent distance={40} blur={5} duration={0.9} threshold={0.1}>
+              <AnimatedContent distance={16} blur={5} duration={0.55} threshold={0.1}>
                 <p className="chapter__lead">{ch.lead}</p>
               </AnimatedContent>
 
-              <AnimatedContent distance={30} blur={3} duration={0.9} threshold={0.15}>
+              <AnimatedContent distance={12} blur={1} duration={0.55} threshold={0.15}>
                 <div className="chapter__stats">
                   {ch.stats.map((s, i) => (
                     <div className="statbar" key={s.label + i}>
@@ -246,7 +246,7 @@ export default function Projects() {
 
               <div className="chapter__gallery">
                 {ch.gallery.map((g, i) => (
-                  <AnimatedContent key={g.src} distance={24} blur={2} duration={0.8} delay={(i % 4) * 0.05} threshold={0.1}>
+                  <AnimatedContent key={g.src} distance={24} blur={2} duration={0.5} delay={(i % 4) * 0.05} threshold={0.1}>
                     <figure
                       className={`gitem${i === 0 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
                       onClick={() => open({ title: ch.title, tag: ch.kicker, year: ch.time, desc: ch.lead, role: ch.role, gallery: ch.gallery }, i)}
@@ -276,7 +276,7 @@ export default function Projects() {
           </h3>
           <div className="more__grid">
             {MORE.map((m, i) => (
-              <AnimatedContent key={m.title} className="ac-fill" distance={40} blur={4} duration={0.85} delay={(i % 2) * 0.08} threshold={0.12}>
+              <AnimatedContent key={m.title} className="ac-fill" distance={16} blur={2} duration={0.5} delay={(i % 2) * 0.08} threshold={0.12}>
                 <article className="mcard" onClick={() => open({ title: m.title, tag: m.tag, desc: m.desc, gallery: m.gallery })} tabIndex={0} role="button" onKeyDown={(e) => { if (e.key === 'Enter') open({ title: m.title, tag: m.tag, desc: m.desc, gallery: m.gallery }) }}>
                   <div className="mcard__media" style={{ background: TONES[m.tone] }}>
                     <img src={P(m.cover)} alt={m.title} loading="lazy" />

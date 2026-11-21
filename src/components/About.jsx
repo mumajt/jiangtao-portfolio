@@ -46,14 +46,14 @@ export default function About() {
           en="ABOUT ME"
           ghost="ABOUT"
         >
-          <AnimatedContent distance={40} blur={6} duration={0.8}>
+          <AnimatedContent distance={16} blur={2} duration={0.5}>
             <h2 className="section__title">关于我</h2>
           </AnimatedContent>
         </SectionHead>
 
         <div className="about__grid">
           {/* 人物图：把头像放到 public/avatar.webp 即可替换占位图 */}
-          <AnimatedContent direction="horizontal" distance={50} duration={0.9}>
+          <AnimatedContent direction="horizontal" distance={20} duration={0.55}>
             <div className="about__portrait">
               <div className="about__portrait-frame">
                 {avatarOk && (
@@ -73,7 +73,7 @@ export default function About() {
             </div>
           </AnimatedContent>
 
-          <AnimatedContent distance={40} blur={4} duration={0.9} delay={0.12}>
+          <AnimatedContent distance={16} blur={2} duration={0.55} delay={0.12}>
             <div className="about__body">
             <p className="about__lead">
               你好，我是蒋涛。一名深耕医药、快消、家居行业的<span className="accent grad">企业品牌设计师（企划设计）</span>。
@@ -121,7 +121,7 @@ export default function About() {
             <span className="sublabel__en">CAREER PATH</span>
           </h3>
           {CAREER.map((c, i) => (
-            <AnimatedContent key={c.company + c.time} distance={36} blur={3} duration={0.8} delay={i * 0.06}>
+            <AnimatedContent key={c.company + c.time} distance={14} blur={1} duration={0.5} delay={i * 0.06}>
               <div className="timeline__item">
                 <div className="timeline__time">{c.time}</div>
                 <div className="timeline__main">
@@ -142,7 +142,7 @@ export default function About() {
             <i className="sublabel__dot" />
             <span className="sublabel__en">TRUSTED BY</span>
           </p>
-          <AnimatedContent distance={30} blur={3} duration={0.9}>
+          <AnimatedContent distance={12} blur={1} duration={0.55}>
             <LogoLoop
               logos={BRANDS}
               direction="right"

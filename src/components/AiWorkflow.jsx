@@ -39,7 +39,7 @@ export default function AiWorkflow() {
               en="AI WORKFLOW"
               ghost="WORKFLOW"
             >
-              <AnimatedContent distance={40} blur={6} duration={0.8}>
+              <AnimatedContent distance={16} blur={2} duration={0.5}>
                 <h2 className="section__title">AI 工具 · 协助工作流</h2>
               </AnimatedContent>
             </SectionHead>
@@ -59,7 +59,7 @@ export default function AiWorkflow() {
 
         <div className="ai__grid">
           {FLOW.map((f, i) => (
-            <AnimatedContent key={f.step} className="ac-fill" distance={48} blur={4} duration={0.85} delay={i * 0.08} threshold={0.15}>
+            <AnimatedContent key={f.step} className="ac-fill" distance={18} blur={2} duration={0.5} delay={i * 0.08} threshold={0.15}>
               <div className="ai__card">
                 <div className="ai__step">
                   <span>{f.step}</span>

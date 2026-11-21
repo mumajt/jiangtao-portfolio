@@ -49,7 +49,7 @@ export default function Hero() {
             animateBy="letters"
             delay={150}
             blur={12}
-            distance={40}
+            distance={16}
           />
           <BlurText
             text="PORTFOLIO"
@@ -57,7 +57,7 @@ export default function Hero() {
             animateBy="letters"
             delay={420}
             blur={12}
-            distance={40}
+            distance={16}
           />
         </h1>
         <p className="hero__sub reveal reveal--d2">
