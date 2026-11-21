@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import Lightbox from './Lightbox.jsx'
-import DecryptedText from './rb/DecryptedText.jsx'
 import AnimatedContent from './rb/AnimatedContent.jsx'
 import SectionHead from './SectionHead.jsx'
 
@@ -170,13 +169,13 @@ const MORE = [
 ]
 
 const TONES = {
-  teal: 'linear-gradient(135deg, #0d2b28 0%, #16443d 55%, #1f6b5c 100%)',
-  violet: 'linear-gradient(135deg, #221433 0%, #35204e 55%, #4b2f6e 100%)',
-  amber: 'linear-gradient(135deg, #2e2110 0%, #4a3517 55%, #6b4c1e 100%)',
-  rose: 'linear-gradient(135deg, #2e1218 0%, #4a1e28 55%, #6b2b3a 100%)',
-  steel: 'linear-gradient(135deg, #101820 0%, #1c2a38 55%, #2b4055 100%)',
-  wine: 'linear-gradient(135deg, #250d10 0%, #45161c 55%, #672029 100%)',
-  coral: 'linear-gradient(135deg, #2b0f1c 0%, #4d1a30 55%, #6f2545 100%)',
+  teal: 'linear-gradient(135deg, #efebe0 0%, #e3ddcd 100%)',
+  violet: 'linear-gradient(135deg, #efebe0 0%, #e3ddcd 100%)',
+  amber: 'linear-gradient(135deg, #efebe0 0%, #e3ddcd 100%)',
+  rose: 'linear-gradient(135deg, #efebe0 0%, #e3ddcd 100%)',
+  steel: 'linear-gradient(135deg, #efebe0 0%, #e3ddcd 100%)',
+  wine: 'linear-gradient(135deg, #efebe0 0%, #e3ddcd 100%)',
+  coral: 'linear-gradient(135deg, #efebe0 0%, #e3ddcd 100%)',
 }
 
 export default function Projects() {
@@ -197,7 +196,7 @@ export default function Projects() {
         <SectionHead
           kicker={
             <p className="section__kicker">
-              <DecryptedText text="贰 · WORKS" animateOn="view" speed={50} maxIterations={6} characters="!<>-_\/[]{}=+*^?#" />
+              贰 · WORKS
             </p>
           }
           en="SELECTED PROJECTS"

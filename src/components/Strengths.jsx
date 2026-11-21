@@ -1,4 +1,3 @@
-import DecryptedText from './rb/DecryptedText.jsx'
 import BorderGlow from './rb/BorderGlow.jsx'
 import AnimatedContent from './rb/AnimatedContent.jsx'
 import SectionHead from './SectionHead.jsx'
@@ -56,7 +55,7 @@ export default function Strengths() {
         <SectionHead
           kicker={
             <p className="section__kicker">
-              <DecryptedText text="叁 · STRENGTHS" animateOn="view" speed={50} maxIterations={6} characters="!<>-_\/[]{}=+*^?#" />
+              叁 · STRENGTHS
             </p>
           }
           en="CORE STRENGTHS"
@@ -72,15 +71,15 @@ export default function Strengths() {
             <AnimatedContent key={s.no} className="ac-fill" distance={48} blur={4} duration={0.85} delay={(i % 3) * 0.09} threshold={0.15}>
               <BorderGlow
                 className="glow-card"
-                backgroundColor="#11151c"
-                borderRadius={14}
-                glowColor="168 74 60"
+                backgroundColor="#fbf9f4"
+                borderRadius={8}
+                glowColor="178 62 38"
                 glowRadius={26}
-                glowIntensity={0.95}
+                glowIntensity={0.55}
                 edgeSensitivity={32}
                 coneSpread={22}
                 fillOpacity={0.35}
-                colors={['#4fe3c1', '#6ea8ff', '#b98bff']}
+                colors={['#b23e26']}
               >
                 <span className="scard__no">{s.no}</span>
                 <h3>{s.title}</h3>

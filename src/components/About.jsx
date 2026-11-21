@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import CountUp from './rb/CountUp.jsx'
-import DecryptedText from './rb/DecryptedText.jsx'
 import AnimatedContent from './rb/AnimatedContent.jsx'
 import LogoLoop from './rb/LogoLoop.jsx'
 import SectionHead from './SectionHead.jsx'
@@ -41,7 +40,7 @@ export default function About() {
         <SectionHead
           kicker={
             <p className="section__kicker">
-              <DecryptedText text="壹 · ABOUT" animateOn="view" speed={50} maxIterations={6} characters="!<>-_\/[]{}=+*^?#" />
+              壹 · ABOUT
             </p>
           }
           en="ABOUT ME"

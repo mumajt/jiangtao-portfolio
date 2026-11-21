@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
-import CanvasBG from './CanvasBG.jsx'
 import FallingGallery from './FallingGallery.jsx'
 import BlurText from './rb/BlurText.jsx'
-import DecryptedText from './rb/DecryptedText.jsx'
 
 export default function Hero() {
   const [videoOk, setVideoOk] = useState(true)
@@ -37,20 +35,13 @@ export default function Hero() {
           <source src="hero.mp4" type="video/mp4" />
         </video>
       )}
-      <CanvasBG className="hero__canvas" />
       {/* 作品瀑布背景：多列作品图缓慢下落循环，纯装饰，位于压暗层之下不影响文字 */}
       <FallingGallery />
       <div className="hero__mask" />
 
       <div className="hero__content container">
         <p className="hero__kicker reveal">
-          <DecryptedText
-            text="12 YEARS · BRAND SIDE · 医药 / 家居 / 食品 / 酒业"
-            animateOn="view"
-            speed={55}
-            maxIterations={6}
-            characters="!<>-_\/[]{}=+*^?#"
-          />
+          12 YEARS · BRAND SIDE · 医药 / 家居 / 食品 / 酒业
         </p>
         <h1 className="hero__title">
           <BlurText

@@ -1,5 +1,4 @@
 import BlurText from './rb/BlurText.jsx'
-import DecryptedText from './rb/DecryptedText.jsx'
 import AnimatedContent from './rb/AnimatedContent.jsx'
 
 const CONTACTS = [
@@ -14,7 +13,7 @@ export default function ContactFooter() {
       <div className="contact__inner container">
         <span className="shead__ghost" aria-hidden="true">CONTACT</span>
         <p className="contact__kicker">
-          <DecryptedText text="伍 · CONTACT" animateOn="view" speed={50} maxIterations={6} characters="!<>-_\/[]{}=+*^?#" />
+          伍 · CONTACT
         </p>
         <h2 className="contact__title">
           <BlurText text="让下一个项目" animateBy="letters" delay={150} blur={10} distance={30} />

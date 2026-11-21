@@ -1,25 +1,25 @@
 /* ============================================================
    蒋涛 · 品牌企划设计师 作品集
-   暗色系 / 高级 / 克制 / 科技感
+   暖纸白 / 画廊编辑风 / 克制
    版心 1700px，PC 端优先
    ============================================================ */
 
 :root {
-  --bg: #0a0c10;
-  --bg-soft: #0e1116;
-  --panel: #11151c;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.14);
-  --text: #e8ecef;
-  --text-dim: #9aa3ad;
-  --text-faint: #5c6570;
-  --accent: #4fe3c1;
-  --accent-dim: rgba(79, 227, 193, 0.12);
+  --bg: #f4f1ea;
+  --bg-soft: #ece8dd;
+  --panel: #fbf9f4;
+  --line: rgba(28, 27, 24, 0.12);
+  --line-strong: rgba(28, 27, 24, 0.22);
+  --text: #1c1b18;
+  --text-dim: #55534b;
+  --text-faint: #8f8b80;
+  --accent: #b23e26;
+  --accent-dim: rgba(178, 62, 38, 0.08);
   --font: 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', 'Noto Sans SC',
     -apple-system, 'Segoe UI', sans-serif;
   --font-en: 'SF Mono', 'JetBrains Mono', Consolas, monospace;
   --container: 1700px;
-  --radius: 14px;
+  --radius: 8px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,7 +36,7 @@ body {
   overflow-x: hidden;
 }
 
-::selection { background: var(--accent); color: #04110d; }
+::selection { background: var(--accent); color: #fdf9f3; }
 
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -88,24 +88,24 @@ a { color: inherit; text-decoration: none; }
 }
 
 .btn--solid {
-  background: var(--accent);
-  color: #04110d;
+  background: var(--text);
+  color: #f7f3ea;
   font-weight: 600;
 }
 .btn--solid:hover {
-  box-shadow: 0 0 32px rgba(79, 227, 193, 0.35);
+  box-shadow: 0 14px 30px rgba(28, 27, 24, 0.16);
   transform: translateY(-2px);
 }
 
 .btn--outline {
   border-color: var(--line-strong);
   color: var(--text);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(28, 27, 24, 0.03);
 }
 .btn--outline:hover {
   border-color: var(--accent);
   color: var(--accent);
-  box-shadow: 0 0 26px rgba(79, 227, 193, 0.16);
+  box-shadow: 0 10px 22px rgba(28, 27, 24, 0.10);
   transform: translateY(-2px);
 }
 
@@ -121,7 +121,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav--scrolled {
-  background: rgba(10, 12, 16, 0.72);
+  background: rgba(244, 241, 234, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom-color: var(--line);
@@ -208,8 +208,8 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(10,12,16,0.55) 0%, rgba(10,12,16,0.35) 45%, var(--bg) 100%),
-    radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, rgba(10,12,16,0.6) 100%);
+    linear-gradient(180deg, rgba(244,241,234,0.78) 0%, rgba(244,241,234,0.5) 45%, var(--bg) 100%),
+    radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, rgba(244,241,234,0.72) 100%);
 }
 
 .hero__content { position: relative; z-index: 2; padding-top: 60px; }
@@ -259,18 +259,18 @@ a { color: inherit; text-decoration: none; }
 }
 
 .fallgal__item {
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-  background: #12151b;
+  border: 1px solid rgba(28, 27, 24, 0.10);
+  box-shadow: 0 18px 40px rgba(28, 27, 24, 0.12);
+  background: #ffffff;
 }
 
 .fallgal__item img {
   display: block;
   width: 100%;
   height: auto;
-  filter: saturate(0.8) brightness(0.78) contrast(1.03);
+  filter: saturate(0.94) contrast(1.02);
 }
 
 @keyframes fallgal-drop {
@@ -283,8 +283,8 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 48% 46% at 36% 45%, rgba(10, 12, 16, 0.82) 0%, rgba(10, 12, 16, 0.3) 58%, transparent 100%),
-    linear-gradient(180deg, rgba(10, 12, 16, 0.85) 0%, transparent 22%, transparent 70%, rgba(10, 12, 16, 0.92) 100%);
+    radial-gradient(ellipse 48% 46% at 36% 45%, rgba(244, 241, 234, 0.93) 0%, rgba(244, 241, 234, 0.5) 58%, transparent 100%),
+    linear-gradient(180deg, rgba(244, 241, 234, 0.95) 0%, transparent 24%, transparent 68%, rgba(244, 241, 234, 0.97) 100%);
 }
 
 @media (max-width: 1280px) {
@@ -449,14 +449,14 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(circle at 70% 20%, rgba(79,227,193,0.08), transparent 50%),
-    linear-gradient(160deg, #131820, #0d1015);
+    radial-gradient(circle at 70% 20%, rgba(178,62,38,0.08), transparent 50%),
+    linear-gradient(160deg, #eae4d6, #dcd4c0);
 }
 
 .about__portrait-fallback span {
   font-size: 120px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.06);
+  color: rgba(28, 27, 24, 0.08);
   letter-spacing: 0.1em;
 }
 
@@ -562,7 +562,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 13.5px;
   letter-spacing: 0.06em;
   color: var(--text-dim);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(28, 27, 24, 0.03);
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 8px 20px;
@@ -584,9 +584,9 @@ a { color: inherit; text-decoration: none; }
 .pfilter__btn:hover { border-color: var(--line-strong); color: var(--text); }
 
 .pfilter__btn.is-active {
-  color: #04110d;
-  background: var(--accent);
-  border-color: var(--accent);
+  color: #f7f3ea;
+  background: var(--text);
+  border-color: var(--text);
   font-weight: 600;
 }
 
@@ -613,14 +613,14 @@ a { color: inherit; text-decoration: none; }
   content: '';
   flex: 0 0 56px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(79, 227, 193, 0.55));
+  background: linear-gradient(90deg, transparent, rgba(178, 62, 38, 0.55));
 }
 
 .sublabel::after {
   content: '';
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(79, 227, 193, 0.28), transparent 82%);
+  background: linear-gradient(90deg, rgba(178, 62, 38, 0.28), transparent 82%);
 }
 
 .sublabel__cn {
@@ -635,7 +635,6 @@ a { color: inherit; text-decoration: none; }
   height: 5px;
   background: var(--accent);
   transform: rotate(45deg);
-  box-shadow: 0 0 8px rgba(79, 227, 193, 0.7);
   flex: 0 0 auto;
 }
 
@@ -661,10 +660,10 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   padding: 6px;
-  background: rgba(255, 255, 255, 0.96);
+  background: #ffffff;
   border-radius: 7px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(28, 27, 24, 0.12);
+  box-shadow: 0 6px 20px rgba(28, 27, 24, 0.10);
   transition: transform 0.35s, box-shadow 0.35s;
   cursor: default;
 }
@@ -684,7 +683,7 @@ a { color: inherit; text-decoration: none; }
 
 .brands__logo:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(79, 227, 193, 0.18);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(178, 62, 38, 0.18);
 }
 
 /* ---------- 设计工具箱（技能条） ---------- */
@@ -715,7 +714,7 @@ a { color: inherit; text-decoration: none; }
   flex: 1;
   height: 4px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(28, 27, 24, 0.10);
   overflow: hidden;
 }
 
@@ -723,8 +722,7 @@ a { color: inherit; text-decoration: none; }
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent), rgba(185, 139, 255, 0.85));
-  box-shadow: 0 0 12px rgba(79, 227, 193, 0.35);
+  background: var(--accent);
 }
 
 .skills__pct {
@@ -753,7 +751,7 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.25s;
 }
 
-.timeline__item:hover { background: rgba(255, 255, 255, 0.015); }
+.timeline__item:hover { background: rgba(28, 27, 24, 0.028); }
 
 .timeline__time {
   font-family: var(--font-en);
@@ -846,7 +844,7 @@ a { color: inherit; text-decoration: none; }
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent) 0%, rgba(79, 227, 193, 0.25) 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(178, 62, 38, 0.25) 100%);
   transform-origin: left center;
   transform: scaleX(0);
   z-index: 101;
@@ -1088,7 +1086,7 @@ a { color: inherit; text-decoration: none; }
   padding: 16px 22px;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(28, 27, 24, 0.028);
 }
 
 .lightbox__fact-label {
@@ -1274,11 +1272,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 .scard:hover .scard__tags span,
-.glow-card:hover .scard__tags span { border-color: rgba(79, 227, 193, 0.35); color: var(--text-dim); }
+.glow-card:hover .scard__tags span { border-color: rgba(28, 27, 24, 0.3); color: var(--text-dim); }
 
 /* ---------- BorderGlow 流光边框卡片（个人优势） ---------- */
 .glow-card {
-  box-shadow: 0 18px 44px -20px rgba(0, 0, 0, 0.55);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(28, 27, 24, 0.04), 0 20px 44px -28px rgba(28, 27, 24, 0.18);
   transition: transform 0.3s;
 }
 
@@ -1328,7 +1328,6 @@ a { color: inherit; text-decoration: none; }
 .ai__tools span:hover {
   color: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 20px rgba(79, 227, 193, 0.15);
 }
 
 .ai__grid {
@@ -1391,7 +1390,7 @@ a { color: inherit; text-decoration: none; }
   width: 1700px;
   height: 920px;
   background:
-    radial-gradient(ellipse 40% 36% at 50% 60%, rgba(79, 227, 193, 0.10), transparent 70%),
+    radial-gradient(ellipse 40% 36% at 50% 60%, rgba(178, 62, 38, 0.10), transparent 70%),
     radial-gradient(ellipse 30% 34% at 26% 66%, rgba(255, 148, 82, 0.07), transparent 70%),
     radial-gradient(ellipse 30% 34% at 74% 66%, rgba(150, 96, 255, 0.09), transparent 70%);
   pointer-events: none;
@@ -1449,7 +1448,7 @@ a { color: inherit; text-decoration: none; }
 .contact__item:not(:last-child) { border-right: 1px solid var(--line); padding-right: 48px; }
 .contact__item + .contact__item { padding-left: 48px; }
 
-.contact__item:hover { background: rgba(255, 255, 255, 0.015); }
+.contact__item:hover { background: rgba(28, 27, 24, 0.028); }
 
 .contact__label {
   font-family: var(--font-en);
@@ -1551,25 +1550,25 @@ body::after {
 .about {
   --glow:
     radial-gradient(ellipse 680px 480px at 90% 4%, rgba(255, 148, 82, 0.075), transparent 68%),
-    radial-gradient(ellipse 760px 540px at 2% 92%, rgba(79, 227, 193, 0.06), transparent 68%);
+    radial-gradient(ellipse 760px 540px at 2% 92%, rgba(178, 62, 38, 0.06), transparent 68%);
 }
 
 .projects {
   --glow:
     radial-gradient(ellipse 820px 560px at 94% 88%, rgba(150, 96, 255, 0.08), transparent 68%),
-    radial-gradient(ellipse 640px 460px at 4% 8%, rgba(79, 227, 193, 0.05), transparent 68%);
+    radial-gradient(ellipse 640px 460px at 4% 8%, rgba(178, 62, 38, 0.05), transparent 68%);
 }
 
 .strengths {
   --glow:
-    radial-gradient(ellipse 720px 520px at 92% 14%, rgba(79, 227, 193, 0.055), transparent 68%),
+    radial-gradient(ellipse 720px 520px at 92% 14%, rgba(178, 62, 38, 0.055), transparent 68%),
     radial-gradient(ellipse 660px 500px at 6% 94%, rgba(255, 148, 82, 0.055), transparent 68%);
 }
 
 .ai {
   --glow:
     radial-gradient(ellipse 800px 560px at 8% 10%, rgba(122, 130, 255, 0.07), transparent 68%),
-    radial-gradient(ellipse 660px 500px at 94% 92%, rgba(79, 227, 193, 0.05), transparent 68%);
+    radial-gradient(ellipse 660px 500px at 94% 92%, rgba(178, 62, 38, 0.05), transparent 68%);
 }
 
 /* 渐变分隔光线：替代原纯色 border-top */
@@ -1584,7 +1583,7 @@ body::after {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(79, 227, 193, 0.45) 20%,
+    rgba(178, 62, 38, 0.45) 20%,
     rgba(255, 148, 82, 0.38) 50%,
     rgba(150, 96, 255, 0.32) 78%,
     transparent 100%
@@ -1593,7 +1592,7 @@ body::after {
 
 /* ---------- 渐变强调文字 ---------- */
 .grad {
-  background: linear-gradient(95deg, #4fe3c1 0%, #6ea8ff 46%, #b98bff 100%);
+  background: linear-gradient(95deg, #b23e26 0%, #6ea8ff 46%, #b98bff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1601,13 +1600,13 @@ body::after {
 
 /* 数据大数字：白银渐变，更有质感 */
 .stat__num {
-  background: linear-gradient(165deg, #ffffff 32%, #8d99a6 100%);
+  background: linear-gradient(165deg, #33312a 25%, #12110e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .stat__num em {
-  -webkit-text-fill-color: #4fe3c1;
+  -webkit-text-fill-color: #b23e26;
   background: none;
 }
 
@@ -1647,8 +1646,8 @@ body::after {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
-  color: rgba(255, 255, 255, 0.02);
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.055);
+  color: rgba(28, 27, 24, 0.015);
+  -webkit-text-stroke: 1px rgba(28, 27, 24, 0.10);
   pointer-events: none;
   user-select: none;
 }
@@ -1658,7 +1657,7 @@ body::after {
   position: absolute;
   right: 2px;
   top: 8px;
-  color: rgba(79, 227, 193, 0.5);
+  color: rgba(178, 62, 38, 0.5);
 }
 
 .shead__spark svg {
@@ -1720,7 +1719,7 @@ body::after {
   font-weight: 700;
   line-height: 0.9;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(79, 227, 193, 0.35);
+  -webkit-text-stroke: 1px rgba(178, 62, 38, 0.55);
   letter-spacing: -0.04em;
   flex-shrink: 0;
   user-select: none;
@@ -1938,7 +1937,7 @@ body::after {
 
 .mcard:hover {
   border-color: var(--line-strong);
-  background: #141922;
+  background: #f1ede3;
 }
 
 .mcard__media {

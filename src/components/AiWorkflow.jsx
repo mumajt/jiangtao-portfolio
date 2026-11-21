@@ -1,4 +1,3 @@
-import DecryptedText from './rb/DecryptedText.jsx'
 import AnimatedContent from './rb/AnimatedContent.jsx'
 import SectionHead from './SectionHead.jsx'
 
@@ -34,7 +33,7 @@ export default function AiWorkflow() {
             <SectionHead
               kicker={
                 <p className="section__kicker">
-                  <DecryptedText text="肆 · AI WORKFLOW" animateOn="view" speed={50} maxIterations={6} characters="!<>-_\/[]{}=+*^?#" />
+                  肆 · AI WORKFLOW
                 </p>
               }
               en="AI WORKFLOW"
