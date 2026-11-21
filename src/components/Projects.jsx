@@ -214,8 +214,7 @@ const MORE = [
     tag: '品牌 VI · 2016 — 2017',
     desc: 'Logo 与标准字规范、辅助图形系统、办公应用与导视系统，贯穿品牌基础与应用两大体系。',
     tone: 'wine',
-    cover: 'vi-01-logo.jpg',
-    coverPos: 'center 42%',
+    cover: 'mcover-vi.jpg',
     gallery: [
       { src: P('vi-01-logo.jpg'), caption: '品牌基础 · Logo 与设计说明' },
       { src: P('vi-02-biaozhunzi.jpg'), caption: '品牌基础 · 标准字规范' },
@@ -232,8 +231,7 @@ const MORE = [
     tag: '跨行业海报 · 2023 — 2026',
     desc: '节气、节日、产品卖点、招商活动——先找准卖点，再定画面，让每一张图都能被一眼读懂、一步记住。',
     tone: 'coral',
-    cover: 'haibao-07-lixia.jpg',
-    coverPos: 'center 28%',
+    cover: 'mcover-posters.jpg',
     gallery: [
       { src: P('hb-qinglv.jpg'), caption: '植此青绿 · 春日主题产品海报（AI 辅助创作）', portrait: true },
       { src: P('hb-shuangjiang.jpg'), caption: '霜降 · 节气 × 熟地黄丸产品海报（AI 辅助创作）', portrait: true },
