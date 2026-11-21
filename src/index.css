@@ -1822,8 +1822,21 @@ body::after {
   gap: 30px 24px;
 }
 
-.gitem {
+/* 动画 wrapper 才是网格子元素：占位规则挂在 wrapper 上 */
+.chapter__gallery > *,
+.chapter__gallery--block > * {
   grid-column: span 3;
+  min-width: 0;
+}
+
+.chapter__gallery > *:has(.gitem--lead),
+.chapter__gallery > *:has(.gitem--wide),
+.chapter__gallery--block > *:has(.gitem--lead) {
+  grid-column: 1 / -1;
+}
+
+.gitem {
+  grid-column: auto;
   cursor: pointer;
   min-width: 0;
   /* 画廊装裱：白卡纸框 + 极淡阴影 */
@@ -2035,7 +2048,8 @@ body::after {
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 1100px) {
-  .gitem, .gitem--fit { grid-column: span 4; }
+  .chapter__gallery > *,
+  .chapter__gallery--block > * { grid-column: span 4; }
   .chapter__gallery > *:nth-child(4n + 2),
   .chapter__gallery > *:nth-child(4n) { margin-top: 0; }
 }
@@ -2048,14 +2062,18 @@ body::after {
   .statbar { border-bottom: 1px solid var(--line); }
   .statbar:nth-child(2n) { border-right: none; }
   .statbar:nth-child(3), .statbar:nth-child(4) { border-bottom: none; }
-  .gitem, .gitem--fit { grid-column: span 6; }
-  .gitem--lead { grid-column: span 12; }
+  .chapter__gallery > *,
+  .chapter__gallery--block > * { grid-column: span 6; }
+  .chapter__gallery > *:has(.gitem--lead),
+  .chapter__gallery > *:has(.gitem--wide) { grid-column: 1 / -1; }
   .gitem--lead .gitem__media { aspect-ratio: 16 / 9; }
   .more__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
-  .gitem, .gitem--fit { grid-column: span 12; }
+  .gitem, .gitem--fit { grid-column: auto; }
+  .chapter__gallery > *,
+  .chapter__gallery--block > * { grid-column: 1 / -1; }
   .gitem__media { aspect-ratio: 3 / 2; }
   .gitem--fit .gitem__media { aspect-ratio: 3 / 2; }
   .gitem { padding: 8px 8px 4px; }
