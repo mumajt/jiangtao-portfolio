@@ -1703,7 +1703,7 @@ body::after {
 
 .chapter {
   position: relative;
-  padding: 90px 0 100px;
+  padding: 100px 0 110px;
   border-top: 1px solid var(--line);
 }
 
@@ -1711,7 +1711,7 @@ body::after {
   display: flex;
   align-items: flex-start;
   gap: 36px;
-  margin-bottom: 42px;
+  margin-bottom: 50px;
 }
 
 .chapter__no {
@@ -1820,43 +1820,97 @@ body::after {
 
 .chapter__gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px 24px;
 }
 
 .gitem {
+  grid-column: span 3;
   cursor: pointer;
   min-width: 0;
 }
 
+/* 首图通栏：作品集 case-study 式 hero */
+.gitem--lead { grid-column: span 12; }
+
 .gitem__media {
-  border-radius: 10px;
+  position: relative;
+  border-radius: 6px;
   overflow: hidden;
   border: 1px solid var(--line);
   aspect-ratio: 4 / 3;
-  transition: transform 0.35s ease, border-color 0.35s ease;
+  background: var(--panel);
 }
+
+.gitem--lead .gitem__media { aspect-ratio: 21 / 10; }
 
 .gitem__media img {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1.001);
+  filter: saturate(0.94);
+  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.6s ease;
+  will-change: transform;
 }
 
 .gitem:hover .gitem__media {
-  transform: translateY(-4px);
-  border-color: rgba(79, 227, 193, 0.45);
+  border-color: var(--line-strong);
 }
 
+.gitem:hover .gitem__media img {
+  transform: scale(1.045);
+  filter: saturate(1.03);
+}
+
+/* hover 浮现的序号角标 */
+.gitem__idx {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(10, 12, 16, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: 99px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: none;
+}
+
+.gitem:hover .gitem__idx {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 元数据式图注：编号 + 小字 */
 .gitem figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 2px 0;
+}
+
+.gitem figcaption em {
+  font-family: var(--font-en);
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.gitem figcaption span {
   font-size: 12px;
   color: var(--text-faint);
-  padding: 10px 2px 0;
   line-height: 1.6;
+  transition: color 0.4s ease;
 }
 
-/* 竖图占两行，避免统一 4:3 裁掉内容 */
-.gitem--tall .gitem__media { aspect-ratio: 3 / 4; }
+.gitem:hover figcaption span { color: var(--text-dim); }
 
 /* 竖版截图：完整显示不裁切，垫在同色系底上 */
 .gitem--fit .gitem__media img {
@@ -1876,15 +1930,15 @@ body::after {
 .mcard {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.35s ease, border-color 0.35s ease;
+  transition: border-color 0.45s ease, background 0.45s ease;
 }
 
 .mcard:hover {
-  transform: translateY(-5px);
-  border-color: rgba(79, 227, 193, 0.45);
+  border-color: var(--line-strong);
+  background: #141922;
 }
 
 .mcard__media {
@@ -1897,6 +1951,15 @@ body::after {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1.001);
+  filter: saturate(0.94);
+  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.6s ease;
+  will-change: transform;
+}
+
+.mcard:hover .mcard__media img {
+  transform: scale(1.05);
+  filter: saturate(1.03);
 }
 
 .mcard__view {
@@ -1932,7 +1995,7 @@ body::after {
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 1100px) {
-  .chapter__gallery { grid-template-columns: repeat(3, 1fr); }
+  .gitem, .gitem--fit { grid-column: span 4; }
 }
 
 @media (max-width: 860px) {
@@ -1943,11 +2006,16 @@ body::after {
   .statbar { border-bottom: 1px solid var(--line); }
   .statbar:nth-child(2n) { border-right: none; }
   .statbar:nth-child(3), .statbar:nth-child(4) { border-bottom: none; }
-  .chapter__gallery { grid-template-columns: repeat(2, 1fr); }
+  .gitem, .gitem--fit { grid-column: span 6; }
+  .gitem--lead { grid-column: span 12; }
+  .gitem--lead .gitem__media { aspect-ratio: 16 / 9; }
   .more__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
-  .chapter__gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .gitem, .gitem--fit { grid-column: span 12; }
+  .gitem__media { aspect-ratio: 3 / 2; }
+  .gitem--fit .gitem__media { aspect-ratio: 3 / 2; }
   .chapter__lead { font-size: 14px; }
+  .chapter__gallery { gap: 22px 18px; }
 }

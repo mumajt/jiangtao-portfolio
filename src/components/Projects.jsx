@@ -247,12 +247,19 @@ export default function Projects() {
 
               <div className="chapter__gallery">
                 {ch.gallery.map((g, i) => (
-                  <AnimatedContent key={g.src} distance={30} blur={3} duration={0.8} delay={(i % 4) * 0.06} threshold={0.1}>
-                    <figure className={`gitem${g.portrait ? ' gitem--fit' : ''}`} onClick={() => open({ title: ch.title, tag: ch.kicker, year: ch.time, desc: ch.lead, role: ch.role, gallery: ch.gallery }, i)}>
+                  <AnimatedContent key={g.src} distance={24} blur={2} duration={0.8} delay={(i % 4) * 0.05} threshold={0.1}>
+                    <figure
+                      className={`gitem${i === 0 ? ' gitem--lead' : ''}${g.portrait ? ' gitem--fit' : ''}`}
+                      onClick={() => open({ title: ch.title, tag: ch.kicker, year: ch.time, desc: ch.lead, role: ch.role, gallery: ch.gallery }, i)}
+                    >
                       <div className="gitem__media" style={{ background: TONES[ch.tone] }}>
                         <img src={g.src} alt={g.caption} loading="lazy" />
+                        <span className="gitem__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                       </div>
-                      <figcaption>{g.caption}</figcaption>
+                      <figcaption>
+                        <em>{String(i + 1).padStart(2, '0')}</em>
+                        <span>{g.caption}</span>
+                      </figcaption>
                     </figure>
                   </AnimatedContent>
                 ))}
